@@ -1,0 +1,55 @@
+.header {
+    background-color: black;
+    height: 170px;
+    width: 1440px;
+    position: relative;
+    /*margin-top: -512px;
+    margin-left: -720px;*/
+}
+
+.logo {
+    color: white;
+    position: relative;
+    display: flex;
+    position: fixed;
+    margin-top: 45px;
+}
+
+.login-button {
+    display: inline-flex;
+    /*justify-content: flex-end;*/
+    position: relative;
+    background-color: #D9ECF2;
+    color: black;
+    width: 100px;
+    height: 55px;
+    margin-top: 60px;
+}
+
+.signup-button {
+    display: inline-flex;
+    /*justify-content: flex-end;*/
+    position: relative;
+    color: white;
+    width: 100px;
+    height: 55px;
+    margin-right: -1000px;
+    margin-top: 60px;
+}
+
+.s2-h1 { /* Perfectly curated... */  
+    color: black;
+    font-size: 64px;
+    position: absolute;
+}
+
+.s2-h3 {
+    color: black;
+    font-size: 32px;
+    position: absolute;
+}
+
+.quiz-button {
+    background-color: black;
+    color: white;
+}

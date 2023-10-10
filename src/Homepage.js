@@ -1,5 +1,6 @@
 import React from 'react';
 import { Typography } from '@mui/material';
+//import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 //import { Carousel } from 'bootstrap';
 import AppBar from '@mui/material/AppBar';
@@ -9,6 +10,7 @@ import CardMedia from '@mui/material/CardMedia';
 import Container from '@mui/material/Container';
 import Link from '@mui/material/Link';
 import Avatar from '@mui/material/Avatar';
+import './Homepage.css';
 
 //<Carousel id="image-carousel-dishes" align="center"></Carousel>
 //<Carousel id="image-carousel-ingredients" align="center"></Carousel>
@@ -16,22 +18,27 @@ import Avatar from '@mui/material/Avatar';
 export default function Homepage() {
     return (
         <>
-            <div id="section-1">
+            <div id="section-1" className="header">
                 <Container maxWidth="lg">
-                    <Typography variant="h2" color="secondary">iPrep</Typography>
-                    <Button id="login-button" variant="contained" color="primary">Login</Button>
-                    <Button id="signup-button" variant="outlined" color="secondary">Sign Up</Button>
+                    <Typography variant="h2" color="secondary" className="logo">iPrep</Typography>
+                    <Button id="login-button" variant="contained" color="primary" className="login-button">Login</Button>
+                    <Button id="signup-button" color="secondary" className="signup-button">Sign Up</Button>
                 </Container>
             </div>
 
             <div id="section-2">
                 <Container maxWidth="lg">
-                    <img alt="blue-counter-bg-img" src="/public/media/blue-counter-bg-img"/>
+                    <Card>
+                        <CardMedia
+                            image={require('./media/blue-counter-bg-img.jpg')}
+                            style={{height: 500, width: 1000}}
+                        />
+                    </Card>
                     <div>
-                        <Typography variant="h1" align="center" color="primary">Perfectly curated, easy, and healthy.</Typography>
-                        <Typography variant="h3" align="center" color="primary">Bringing groceries to you based on what you like with recipes so you can prep like a champ.</Typography>
+                        <Typography variant="h1" align="center" color="primary" className="s2-h1">Perfectly curated, easy, and healthy.</Typography>
+                        <Typography variant="h3" align="center" color="primary" className="s2-h3">Bringing groceries to you based on what you like with recipes so you can prep like a champ.</Typography>
                     </div>
-                    <Button id="quiz-button" variant="contained" align="center" color="secondary">Take the quiz</Button>
+                    <Button id="quiz-button" variant="contained" align="center" color="secondary" className="quiz-button">Take the quiz</Button>
                 </Container>
             </div>
             <div id="section-3">
@@ -103,29 +110,29 @@ export default function Homepage() {
                         <Typography variant="h3" color="primary">Carlos S.</Typography>
                         <img alt="Carlos'-food"/>
                     </div>
-                    <Link variant="h2" align="center" color="secondary">Read More Reviews</Link>
+                    <Link variant="h2" align="center" color="secondary" href="">Read More Reviews</Link>
                 </Container>
             </div>
 
             <AppBar id="nav" position="relative">
                 <div id="left-nav">
-                    <Link variant="h2" color="secondary">iPrep</Link>
-                    <Link variant="h2" color="primary">quiz</Link>
-                    <Link variant="h2" color="primary">recipes</Link>
-                    <Link variant="h2" color="primary">cart</Link>
+                    <Link variant="h2" color="secondary" href="">iPrep</Link>
+                    <Link variant="h2" color="primary" href="">quiz</Link>
+                    <Link variant="h2" color="primary" href="">recipes</Link>
+                    <Link variant="h2" color="primary" href="">cart</Link>
                 </div>
                 <div id="right-nav">
-                    <Link variant="h4" color="primary">info</Link>
-                    <Link variant="h4" color="primary">philosophy</Link>
-                    <Link variant="h4" color="primary">sustainability</Link>
-                    <Link variant="h4" color="primary">careers</Link>
-                    <Link variant="h4" color="primary">contact us</Link>
-                    <Link variant="h4" color="primary">FAQ</Link>
-                    <Link variant="h4" color="primary">community</Link>
-                    <Link variant="h4" color="primary">blog</Link>
-                    <Link variant="h4" color="primary">instagram</Link>
-                    <Link variant="h4" color="primary">tiktok</Link>
-                    <Link variant="h4" color="primary">facebook</Link>
+                    <Link variant="h4" color="primary" href="">info</Link>
+                    <Link variant="h4" color="primary" href="">philosophy</Link>
+                    <Link variant="h4" color="primary" href="">sustainability</Link>
+                    <Link variant="h4" color="primary" href="">careers</Link>
+                    <Link variant="h4" color="primary" href="">contact us</Link>
+                    <Link variant="h4" color="primary" href="">FAQ</Link>
+                    <Link variant="h4" color="primary" href="">community</Link>
+                    <Link variant="h4" color="primary" href="">blog</Link>
+                    <Link variant="h4" color="primary" href="">instagram</Link>
+                    <Link variant="h4" color="primary" href="">tiktok</Link>
+                    <Link variant="h4" color="primary" href="">facebook</Link>
                 </div>
             </AppBar>
         </>
