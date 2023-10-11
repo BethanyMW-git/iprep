@@ -16,6 +16,7 @@ import './Homepage.css';
 //<Carousel id="image-carousel-ingredients" align="center"></Carousel>
 
 export default function Homepage() {
+
     return (
         <>
             <div id="section-1" className="header">
@@ -26,12 +27,12 @@ export default function Homepage() {
                 </Container>
             </div>
 
-            <div id="section-2">
+            <div id="section-2" className="section-2">
                 <Container maxWidth="lg">
                     <Card>
                         <CardMedia
                             image={require('./media/blue-counter-bg-img.jpg')}
-                            style={{height: 500, width: 1000}}
+                            style={{height: 500}}
                         />
                     </Card>
                     <div>
