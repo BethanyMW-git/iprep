@@ -10,7 +10,7 @@ import CardMedia from '@mui/material/CardMedia';
 import Container from '@mui/material/Container';
 import Link from '@mui/material/Link';
 import Avatar from '@mui/material/Avatar';
-import './Homepage.css';
+//import './Homepage.css';
 
 //<Carousel id="image-carousel-dishes" align="center"></Carousel>
 //<Carousel id="image-carousel-ingredients" align="center"></Carousel>
@@ -19,26 +19,27 @@ export default function Homepage() {
     return (
         <>
             <div id="section-1" className="header">
-                <Container maxWidth="lg">
-                    <Typography variant="h2" color="secondary" className="logo">iPrep</Typography>
-                    <Button id="login-button" variant="contained" color="primary" className="login-button">Login</Button>
-                    <Button id="signup-button" color="secondary" className="signup-button">Sign Up</Button>
+                <Container maxWidth="lg" sx={{ color: "primary"}}>
+                    <Typography variant="h2" color="secondary" className="logo" sx={{ mr: 150, mt: 8}}>iPrep</Typography>
+                    <Button id="login-button" variant="contained" className="login-button" sx={{ bgcolor: "myCustomBlue.main", color: "#000000", mb: 5, mt: -7}}>Login</Button>
+                    <Button id="signup-button" color="secondary" className="signup-button" sx={{ mr: -67, mb: 5, mt: -7}}>Sign Up</Button>
                 </Container>
             </div>
 
             <div id="section-2">
-                <Container maxWidth="lg">
-                    <Card>
+                <Container sx={{ bgcolor: "myCustomBlue.main", display: 'flex'}}>
+                    <Card sx={{mt: 5, mb: 5, maxWidth: 1440}}>
                         <CardMedia
                             image={require('./media/blue-counter-bg-img.jpg')}
                             style={{height: 500, width: 1000}}
                         />
                     </Card>
                     <div>
-                        <Typography variant="h1" align="center" color="primary" className="s2-h1">Perfectly curated, easy, and healthy.</Typography>
-                        <Typography variant="h3" align="center" color="primary" className="s2-h3">Bringing groceries to you based on what you like with recipes so you can prep like a champ.</Typography>
+                        <Typography variant="h1" align="center" color="primary" className="s2-h1" sx={{ fontWeight: 200, mb: 5, mt: 5}}>Perfectly curated, easy, and healthy.</Typography>
+                        <Typography variant="h3" align="center" color="primary" className="s2-h3" sx={{ fontSize: 30, mb: 5}}>Bringing groceries to you based on what you like with recipes so you can prep like a champ.</Typography>
+                    
+                    <Button id="quiz-button" variant="contained" align="center" className="quiz-button" sx={{ bgcolor: "primary", mb: 5, display: 'inline-flex'}}>Take the quiz</Button>
                     </div>
-                    <Button id="quiz-button" variant="contained" align="center" color="secondary" className="quiz-button">Take the quiz</Button>
                 </Container>
             </div>
             <div id="section-3">
