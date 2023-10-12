@@ -10,6 +10,8 @@ import CardMedia from '@mui/material/CardMedia';
 import Container from '@mui/material/Container';
 import Link from '@mui/material/Link';
 import Avatar from '@mui/material/Avatar';
+import Stack from '@mui/material/Stack';
+
 //import './Homepage.css';
 
 //<Carousel id="image-carousel-dishes" align="center"></Carousel>
@@ -66,10 +68,18 @@ export default function Homepage() {
                 </Container>
             </div>
             <div id="section-4">
-                <Container maxWidth="lg">
-                    <Typography variant="h1" color="secondary">Choose your favorites from our huge selection of recipes.</Typography>
-                    <Typography variant="h3" color="secondary">Quick cook time and diet friendly.</Typography>
-                    
+                <Container sx={{ mb: 5}}>
+                    <Typography variant="h1" color="secondary" sx={{ fontSize: 64, mb: 5}}>Choose your favorites from our huge selection of recipes.</Typography>
+                    <Typography variant="h3" color="secondary" sx={{ fontSize: 32, fontWeight: 200, mb: 5}}>Quick cook time and diet friendly.</Typography>
+                    <Stack direction="row" spacing={2} justifyContent="center">
+                        {/* <IconButton id="left-arrow"/> */}
+                        <Avatar alt="salads" src="./media/plate-salad.jpg"/>
+                        <Avatar alt="pastas" src="./media/plate1-pasta.png"/>
+                        <Avatar alt="mains&sides" src="./media/p3.png"/>
+                        <Avatar alt="sandwiches" src="./media/p4.png"/>
+                        <Avatar alt="tacos" src="./media/carousel-tacos.jpg"/>
+                        {/* <IconButton id="right-arrow"/> */}
+                    </Stack>
                 </Container>
             </div>
             <div id="section-5">
