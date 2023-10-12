@@ -31,6 +31,8 @@ export default function Homepage() {
                 <Container sx={{ bgcolor: "myCustomBlue.main", display: 'flex'}}>
                     <Card sx={{mt: 5, mb: 5, maxWidth: 1440}}>
                         <CardMedia
+                            alt="blue-counter-img"
+                            component="img"
                             image={require('./media/blue-counter-bg-img.jpg')}
                             style={{height: 500}}
                         />
@@ -44,19 +46,23 @@ export default function Homepage() {
                 </Container>
             </div>
             <div id="section-3">
-                <Container maxWidth="lg">
-                    <Card>
+                <Container sx={{ display: 'flex', mb: 5}}>
+                    <Card sx={{ width:"100%", mt: 5, mr: 5}}>
                         <CardActionArea>
                             <CardMedia
                                 component="video"
-                                image={"/public/media/video-yellow-pepper(2160p).mp4"}
-                                allow="autoPlay"
+                                image={"./public/media/video-yellow-pepper(2160p).mp4"}
+                                autoPlay
+                                //src="./public/media/video-yellow-pepper(2160p).mp4"
                             />
                         </CardActionArea>
                     </Card>
-                    <Typography variant="h3" color="secondary">We make it super easy to turn your grocery list into dinner while saving you time.</Typography>
-                    <Typography variant="h4" color="secondary">Check out our Recipe Catalog now to see how!</Typography>
-                    <Button id="recipes-button" color="primary">Recipes</Button>
+                    {/* <video alt="video-goes-here" src="./public/media/video-yellow-pepper(2160p).mp4"></video> */}
+                    <div>
+                    <Typography variant="h3" color="secondary" sx={{ fontSize: 30, fontWeight: 200, mt: 5}}>We make it super easy to turn your grocery list into dinner while saving you time.</Typography>
+                    <Typography variant="h4" color="secondary" sx={{ fontSize: 22, fontWeight: 200, mt: 5}}>Check out our Recipe Catalog now to see how!</Typography>
+                    <Button id="recipes-button" sx={{ bgcolor: '#FFFFFF', mt: 5}}>Recipes</Button>
+                    </div>
                 </Container>
             </div>
             <div id="section-4">
