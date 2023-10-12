@@ -16,6 +16,7 @@ import Avatar from '@mui/material/Avatar';
 //<Carousel id="image-carousel-ingredients" align="center"></Carousel>
 
 export default function Homepage() {
+
     return (
         <>
             <div id="section-1" className="header">
@@ -31,7 +32,7 @@ export default function Homepage() {
                     <Card sx={{mt: 5, mb: 5, maxWidth: 1440}}>
                         <CardMedia
                             image={require('./media/blue-counter-bg-img.jpg')}
-                            style={{height: 500, width: 1000}}
+                            style={{height: 500}}
                         />
                     </Card>
                     <div>

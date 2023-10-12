@@ -1,17 +1,19 @@
+
+/* SECTION 1 */
+
 .header {
     background-color: black;
     height: 170px;
     width: 1440px;
-    position: relative;
+    position: absolute;/*relative*/
     /*margin-top: -512px;
     margin-left: -720px;*/
 }
 
 .logo {
     color: white;
-    position: relative;
+    position: absolute;
     display: flex;
-    position: fixed;
     margin-top: 45px;
 }
 
@@ -37,10 +39,17 @@
     margin-top: 60px;
 }
 
+/* SECTION 2 */
+
+.blue {
+    border: blue 4px;
+}
+
 .s2-h1 { /* Perfectly curated... */  
     color: black;
     font-size: 64px;
     position: absolute;
+    /*text-align: center;*/
 }
 
 .s2-h3 {
@@ -53,3 +62,12 @@
     background-color: black;
     color: white;
 }
+
+/* .section-2 {
+    display: inline-flex;
+    position: fixed;
+    margin-top: 100px;
+    border-color: red;
+    border-radius: 4px;
+}*/
+
