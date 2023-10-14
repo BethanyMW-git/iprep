@@ -5,33 +5,31 @@
     background-color: black;
     height: 170px;
     width: 1440px;
-    position: absolute;/*relative*/
-    /*margin-top: -512px;
-    margin-left: -720px;*/
+    position: absolute;
 }
 
 .logo {
     color: white;
     position: absolute;
     display: flex;
-    margin-top: 45px;
-    margin-right: 150px;
+    margin-top: 4rem;
+    margin-left: 4rem;
+    font-size: 2rem;
 }
 
 .login-button {
-    display: inline-flex;
-    /*justify-content: flex-end;*/
+    display: flexbox;
     position: relative;
-    background-color: #D9ECF2;
-    color: black;
+    background-color: #D9ECF2; /*need to override*/
+    color: black; /*need to override*/
     width: 100px;
     height: 55px;
-    margin-top: 60px;
+    margin-top: 4rem;
     margin-bottom: 10px;
 }
 
 .signup-button {
-    display: inline-flex;
+    display: flexbox;
     /*justify-content: flex-end;*/
     position: relative;
     color: white;
@@ -40,6 +38,7 @@
     margin-right: -1000px;
     margin-top: 60px;
     margin-bottom: 10px;
+    margin-left: 1rem;
 }
 
 /* SECTION 2 */
@@ -48,86 +47,119 @@
     border: blue 4px;
 }
 
+.blue-counter-img {
+    display: flexbox;
+    position: relative;
+}
+
+.container-2 {
+    background-color: #D9ECF2 opacity .4;
+}
+
 .s2-h1 { /* Perfectly curated... */  
     color: black;
     font-size: 64px;
     font-weight: 200;
-    position: absolute;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    /*text-align: center;*/
+    position: relative;
+    display: flexbox;
+    margin-top: 12rem;
+    margin-bottom: 2rem;
+    margin-right: auto;
+    margin-left: auto;
+    /*max-width: 700px;*/
 }
 
-.s2-h3 {
+.s2-h3 { /*Bringing groceries to you based...*/
     color: black;
-    font-size: 30px;
-    position: absolute;
-    margin-bottom: 10px;
+    font-size: 20px;
+    position: relative;
+    display: flexbox;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+
 }
 
 .quiz-button {
     background-color: black;
     color: white;
-    margin-bottom: 10px;
-    display: 'inline-flex'
-}
-
-#section-2 {
-    display: inline-flex;
-    position: fixed;
-    margin-top: 100px;
-    border-color: red;
-    border-radius: 4px;
-    background-image: './media/blue-counter-bg-img.jpg';
-    height: 500px;
-    width: 1440px;
+    margin-bottom: 4rem;
+    display: flexbox;
+    position: relative;
+    height: 15px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* SECTION 3 */
 
 #section-3 {
-    display: flex;
+    display: flexbox;
+    position: relative;
     margin-bottom: 10px;
 }
 
 video {
-    width: 100%;
-    margin-top: 10px;
-    margin-right: 10px;
+    margin-top: 4rem;
+    /*margin-left: 4rem;*/
+    margin-right: 1rem;
+    /*padding: 10px;*/
+    /* background-color: red; comment out when video works */
+    display: flexbox;
+    position: relative;
 }
 
-.s3-h3 {
+.s3-h3 { /*We make it super easy to turn your grocery list...*/
     font-size: 30px;
     font-weight: 200;
-    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 4rem;
+    display: flexbox;
+    position: relative;
 }
 
-.s3-h4 {
+.s3-h4 { /*Check out our Recipe Catalog now to see how!*/
     font-size: 22px;
     font-weight: 200;
-    margin-top: 10px;
+    margin-top: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    display: flex;
 }
 
 #recipes-button {
     background-color: #FFFFFF;
-    margin-top: 10px;
+    margin-top: 1rem;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* SECTION 4 */
 
 #section-4 {
-    margin-bottom: 10px;
+    margin-bottom: 4rem;
 }
 
-.s4-h1 {
+.s4-h1 { /*Choose your favorites from our huge selection...*/
     font-size: 64px;
     margin-bottom: 10px;
+    width: 300px;
+    position: relative;
+    display: grid;
 }
 
 .s4-h3 {
     font-size: 32px;
     font-weight: 200;
     margin-bottom: 10px;
+}
+
+.salad .pastas .mainssides .sandwiches .tacos {
+    height: 500px!important;
 }
 
 /* SECTION 6 */
