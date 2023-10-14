@@ -132,7 +132,6 @@ video {
 }
 
 #recipes-button {
-    background-color: #FFFFFF;
     margin-top: 1rem;
     margin-left: auto;
     margin-right: auto;
@@ -164,31 +163,58 @@ video {
 
 /* SECTION 6 */
 
-.s6-h2 {
-    justify-content: center;
+.s6-h2 { /*Ready to get started?*/
+    /*justify-content: center;*/
+    margin-top: 4rem;
+    margin-bottom: 1.5rem;
 }
 
-#section-6 button {
-    justify-content: center;
+ #section-6 button {
+    margin-bottom: 4rem;
 }
 
 /* SECTION 7 */
 
-.s7-h1 {
-    justify-content: center;
+.s7-h1 { /*iPrep customers have good things to say*/
+    margin-bottom: 4rem;
 }
 
-/* #hannah-avatar {
-    width: 193;
-    height: 190;
-} */
+#hannah-avatar {
+    margin-bottom: 1rem;
+}
 
-/* #justin-avatar {
-    width: 193;
-    height: 190;
-} */
+#hannahs-food {
+    margin-top: 1rem;
+}
 
-/* #carlos-avatar {
-    width: 193;
-    height: 190;
+#justin-avatar {
+    margin-bottom: 1rem;
+}
+
+#justins-food {
+    margin-top: 1rem;
+}
+
+#carlos-avatar {
+    margin-bottom: 1rem;
+}
+
+#carlos-food {
+    margin-top: 1rem;
+    margin-bottom: 4rem;
+}
+
+/* SECTION 8 */
+
+#nav {
+    height: 10rem;
+    background-color: #D9ECF2;
+    margin-top: 4rem;
+}
+
+/* #home-link {
+    margin-top: 4.5rem;
+} */
+/* #contactus-link {
+    text-overflow: nowrap;
 } */
