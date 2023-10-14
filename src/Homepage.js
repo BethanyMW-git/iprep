@@ -64,7 +64,12 @@ export default function Homepage() {
                     <Col>
                         <h3 className="s3-h3">We make it super easy to turn your grocery list into dinner while saving you time.</h3>
                         <h4 className="s3-h4">Check out our Recipe Catalog now to see how!</h4>
-                        <button id="recipes-button">Recipes</button>
+                        <Button
+                            id="recipes-button"
+                            size="sm"
+                            variant="dark">
+                            Recipes
+                        </Button>
                     </Col>
                 </Row>
             </Container>
@@ -161,8 +166,15 @@ export default function Homepage() {
 
             <Container id="section-6" fluid>
                 <Row>
-                    <h2 className="s6-h2">Ready to get started?</h2>
-                    <button id="quiz-button">Take the quiz</button>
+                    <Col>
+                        <h2 className="s6-h2">Ready to get started?</h2>
+                        <Button
+                            id="quiz-button"
+                            size="sm"
+                            variant="dark">
+                            Take the quiz
+                        </Button>
+                    </Col>
                 </Row>
             </Container>
 
@@ -172,22 +184,58 @@ export default function Homepage() {
                 </Row>
                 <Row>
                     <Col id="review-1">
-                        <Image alt="Hannah" id="hannah-avatar" src="./media/review-hannah.jpg" rounded/>
+                        <Image
+                            alt="Hannah"
+                            id="hannah-avatar"
+                            src="https://images.pexels.com/photos/2709388/pexels-photo-2709388.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                            style={{ width: 193}}
+                            rounded
+                        />
                         <p>iPrep has changed my life for the better! I can't believe I have only just found it! I will recommend this meal kit company to everyone I know. The meals are so tasty. I was surprised at first, but I'm so glad I tried something new! Love, love, love iPrep!</p>
                         <h3>Hannah B.</h3>
-                        <img alt="Hannah's-food" src="./media/review-avocado-toast.jpg"/>
+                        <Image
+                            alt="Hannah's-food"
+                            id="hannahs-food"
+                            src="https://images.pexels.com/photos/1351238/pexels-photo-1351238.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                            style={{ width: 193 }}
+                            rounded
+                        />
                     </Col>
                     <Col id="review-2">
-                        <Image alt="Justin" id="justin-avatar" src="./media/review-justin.jpg"/>
+                        <Image
+                            alt="Justin"
+                            id="justin-avatar"
+                            src="https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                            style={{ width: 193}}
+                            rounded
+                        />
                         <p>I have to say, iPrep turned out to be an extremely convenient tool fo rme as I am usually too busy from work and don't really feel like making anything complicated. The recipes I use from my meal kit are easy and extremely practicaly for what I need.</p>
                         <h3>Justin T.</h3>
-                        <img alt="Justin's-food" src="./media/review-meal-prep.jpg"/>
+                        <Image
+                            alt="Justin's-food"
+                            id="justins-food"
+                            src="https://images.pexels.com/photos/1640775/pexels-photo-1640775.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                            style={{ width: 193 }}
+                            rounded
+                        />
                     </Col>
                     <Col id="review-3">
-                        <Image alt="Carlos" id="carlos-avatar" src="./media/review-carlos.jpg"/>
+                        <Image 
+                            alt="Carlos"
+                            id="carlos-avatar"
+                            src="https://images.pexels.com/photos/1205033/pexels-photo-1205033.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                            style={{ width: 193}}
+                            rounded
+                        />
                         <p>Let's GOOOOO!!!!! iPrep is everything they say and more. I started off taking the quiz and ended up with a kit that was able to meet all of my dietary needs. Only tried a couple of recipes so far, but every single one has been delicious, chef-worthy stuff. Definitely coming back to iPrep for more!</p>
                         <h3>Carlos S.</h3>
-                        <img alt="Carlos'-food" src="./media/review-salmon.jpg"/>
+                        <Image
+                            alt="Carlos'-food"
+                            id="carlos-food"
+                            src="https://images.pexels.com/photos/1247677/pexels-photo-1247677.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                            style={{ width: 193 }}
+                            rounded
+                            />
                     </Col>
                 </Row>
                 <Row>
@@ -196,27 +244,31 @@ export default function Homepage() {
             </Container>
 
             <Navbar id="nav" position="relative">
-                <Container id="left-nav">
-
-                    <Navbar.Brand id="home-link" href="#home">iPrep</Navbar.Brand>
-                    <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                    <Navbar.Collapse id="basic-navbar-nav"/>
-
-                    <Nav>
-                        <Nav.Link id="quiz-link" href="#quiz">quiz</Nav.Link>
-                        <Nav.Link id="recipes-link" href="#recipes">recipes</Nav.Link>
-                        <Nav.Link id="cart-link" href="#cart">cart</Nav.Link>
-                    </Nav>
-
-                </Container>
-                <Container id="right-nav">
-                    <Nav>
-                        <Nav.Link id="contactus-link" href="#contactus">contact us</Nav.Link>
-                        <Nav.Link id="faq-link" href="#faq">FAQ</Nav.Link>
-                        <Nav.Link id="blog-link" href="#blog">blog</Nav.Link>
-                        <Nav.Link id="instagram-link" href="#instagram">instagram</Nav.Link>
-                        <Nav.Link id="facebook-link" href="#facebook">facebook</Nav.Link>
-                    </Nav>
+                <Container>
+                    <Row>
+                        <Col xs={1}>
+                            <Navbar.Brand id="home-link" href="#home">iPrep</Navbar.Brand>
+                            <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                            <Navbar.Collapse id="basic-navbar-nav"/>
+                        </Col>
+                        <Col xs={2}>
+                            <Nav>
+                                <Nav.Link id="quiz-link" href="#quiz">quiz</Nav.Link>
+                                <Nav.Link id="recipes-link" href="#recipes">recipes</Nav.Link>
+                                <Nav.Link id="cart-link" href="#cart">cart</Nav.Link>
+                            </Nav>
+                        </Col>
+                        <Col xs={3}></Col>
+                        <Col xs={6}>
+                            <Nav>
+                                <Nav.Link id="contactus-link" href="#contactus">contact us</Nav.Link>
+                                <Nav.Link id="faq-link" href="#faq">FAQ</Nav.Link>
+                                <Nav.Link id="blog-link" href="#blog">blog</Nav.Link>
+                                <Nav.Link id="instagram-link" href="#instagram">instagram</Nav.Link>
+                                <Nav.Link id="facebook-link" href="#facebook">facebook</Nav.Link>
+                            </Nav>
+                        </Col>
+                    </Row>
                 </Container>
             </Navbar>
             
