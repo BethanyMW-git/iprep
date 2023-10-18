@@ -6,7 +6,7 @@ import Button from "react-bootstrap/Button";
 //import Carousel from "react-bootstrap/Carousel";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
-import Figure from 'react-bootstrap/Figure';
+import Figure from "react-bootstrap/Figure";
 import Image from "react-bootstrap/Image";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
@@ -15,26 +15,44 @@ import Row from "react-bootstrap/Row";
 import Stack from "react-bootstrap/Stack";
 //import "./media/video-yellow-pepper(2160p).mp4";
 import { Link } from "react-router-dom";
-import { Logout } from "./components/logout" 
+import { Logout } from "./components/logout";
 
 export default function Homepage() {
+  return (
+    <div id="home">
+      <Container id="section-1" className="header" fluid>
+        <Row>
+          <Col>
+            <h2 className="logo">iPrep</h2>
+          </Col>
+          <Col xs={6}></Col>
+          <Col>
+            <Link to="/login">
+              <button
+                id="login-button"
+                className="btn btn-primary"
+                style={{
+                  backgroundColor: "#D9ECF2",
+                  paddingTop: 10,
+                  paddingLeft: 15,
+                  paddingRight: 15,
+                  color: "black",
+                }}
+              >
+                Login
+              </button>
+            </Link>
+            <Link to="/register">
+              <button id="signup-button" className="btn btn-outline-light">
+                Sign Up
+              </button>
+            </Link>
+            <Logout />
+          </Col>
+        </Row>
+      </Container>
 
-    return (
-        <div id="home">
-            <Container id="section-1" className="header" fluid>
-                <Row>
-                    <Col>
-                        <h2 className="logo">iPrep</h2>
-                    </Col>
-                    <Col xs={6}></Col>
-                    <Col>
-                        <button id="login-button" className="btn btn-primary" style={{ backgroundColor: "#D9ECF2", paddingTop: 10, paddingLeft: 15, paddingRight: 15, color: "black"}}>Login</button>
-                        <button id="signup-button" className="btn btn-outline-light">Sign Up</button>
-                    </Col>
-                </Row>   
-            </Container>
-     
-            {/* <Container id="section-2" fluid>
+      {/* <Container id="section-2" fluid>
                 <Row>
                     <Col>
                         <div style={{ width:1412, height: "auto", marginTop: 170, marginLeft: -12}}>
@@ -54,19 +72,27 @@ export default function Homepage() {
                 </Row>
             </Container> */}
 
-            <div class="container" id="section-2"> This code successfully overlays the text onto the image background, but I'm having trouble getting the image to fill the container.
-                <div class="row">
-                    <div class="col">
-                        <div class="bluebackground">
-                            <h1 className="s2-h1">Perfectly curated, easy, and healthy.</h1>
-                            <h3 className="s2-h3">Bringing groceries to you based on what you like with recipes so you can prep like a champ.</h3>
-                            <Button id="quiz-button" variant="dark" size="sm">Take the quiz</Button>
-                        </div>
-                    </div>
-                </div>
+      <div class="container" id="section-2">
+        {" "}
+        This code successfully overlays the text onto the image background, but
+        I'm having trouble getting the image to fill the container.
+        <div class="row">
+          <div class="col">
+            <div class="bluebackground">
+              <h1 className="s2-h1">Perfectly curated, easy, and healthy.</h1>
+              <h3 className="s2-h3">
+                Bringing groceries to you based on what you like with recipes so
+                you can prep like a champ.
+              </h3>
+              <Button id="quiz-button" variant="dark" size="sm">
+                Take the quiz
+              </Button>
             </div>
+          </div>
+        </div>
+      </div>
 
-            {/* <div class="container"> This code doesn't even come close to achieving the desired result.
+      {/* <div class="container"> This code doesn't even come close to achieving the desired result.
                 <div class="row">
                     <div class="col">
                         <div class="bluebackground">
@@ -81,39 +107,43 @@ export default function Homepage() {
                 </div>
             </div> */}
 
-            <Container id="section-3" fluid>
-                <Row>
-                    <Col>
-                        <div style={{ width: 660 }}>
-                            <Ratio aspectRatio="16x9">
-                                {/* <video src="video-yellow-pepper(2160p).mp4"></video> THIS DOESN'T WORK AND DOESN'T SHOW ANYTHING AT ALL*/}
-                                <embed type="video/mp4" src="video (240p).mp4" autoplay/>
-                                {/* video (240p).mp4 */}
-                                {/* /media/video-yellow-pepper(2160p).mp4 */}
-                                {/* https://www.pexels.com/video/person-slicing-a-yellow-bell-pepper-3192257/ */}
-                            </Ratio>
-                        </div>
-                    </Col>
-                    <Col>
-                        <h3 className="s3-h3">We make it super easy to turn your grocery list into dinner while saving you time.</h3>
-                        <h4 className="s3-h4">Check out our Recipe Catalog now to see how!</h4>
-                        <Button
-                            id="recipes-button"
-                            size="sm"
-                            variant="dark">
-                            Recipes
-                        </Button>
-                    </Col>
-                </Row>
-            </Container>
+      <Container id="section-3" fluid>
+        <Row>
+          <Col>
+            <div style={{ width: 660 }}>
+              <Ratio aspectRatio="16x9">
+                {/* <video src="video-yellow-pepper(2160p).mp4"></video> THIS DOESN'T WORK AND DOESN'T SHOW ANYTHING AT ALL*/}
+                <embed type="video/mp4" src="video (240p).mp4" autoplay />
+                {/* video (240p).mp4 */}
+                {/* /media/video-yellow-pepper(2160p).mp4 */}
+                {/* https://www.pexels.com/video/person-slicing-a-yellow-bell-pepper-3192257/ */}
+              </Ratio>
+            </div>
+          </Col>
+          <Col>
+            <h3 className="s3-h3">
+              We make it super easy to turn your grocery list into dinner while
+              saving you time.
+            </h3>
+            <h4 className="s3-h4">
+              Check out our Recipe Catalog now to see how!
+            </h4>
+            <Button id="recipes-button" size="sm" variant="dark">
+              Recipes
+            </Button>
+          </Col>
+        </Row>
+      </Container>
 
-            <Container id="section-4" fluid>
-                <Row>
-                    <h1 className="s4-h1">Choose your favorites from our huge selection of recipes.</h1>
-                    <h3 className="s4-h3">Quick cook time and diet friendly.</h3>
-                </Row>
-                <Row>
-                    {/* <Carousel id="image-carousel-dishes" align="center">
+      <Container id="section-4" fluid>
+        <Row>
+          <h1 className="s4-h1">
+            Choose your favorites from our huge selection of recipes.
+          </h1>
+          <h3 className="s4-h3">Quick cook time and diet friendly.</h3>
+        </Row>
+        <Row>
+          {/* <Carousel id="image-carousel-dishes" align="center">
                             <Carousel.Item>
                                 <Ratio aspectRatio="16x9">
                                     <img
@@ -171,216 +201,314 @@ export default function Homepage() {
                         </Carousel>
                     </Row>
                 </Container> */}
-                        
-                            <Stack direction="row" spacing={2} justifyContent="center" id="stack">
-                            <Col>
-                                <svg id="left-arrow" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
-                                    <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
-                                </svg>
 
-                                <Image alt="salads" style={{ width: 217, height: 217 }} src="https://images.pexels.com/photos/2097090/pexels-photo-2097090.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" rounded />
-                                <Image alt="pastas" style={{ width: 217, height: 217 }} src="https://images.pexels.com/photos/10456299/pexels-photo-10456299.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" rounded />
-                                <Image alt="mains&sides" style={{ width: 217, height: 217 }} src="https://images.pexels.com/photos/7627422/pexels-photo-7627422.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" rounded/>
-                                <Image alt="sandwiches" style={{ width: 217, height: 217 }} src="https://img.freepik.com/free-photo/top-view-delicious-sandwiches-with-green-salad-ham-tomatoes_140725-29809.jpg?w=1380&t=st=1697242388~exp=1697242988~hmac=da24d8e64b0103d188125e9bc5a064eb5777231b209f2fe19a58744b04f1e9db" rounded/>
-                                <Image alt="tacos" style={{ width: 217, height: 217 }} src="https://images.pexels.com/photos/4958730/pexels-photo-4958730.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" rounded/>
+          <Stack direction="row" spacing={2} justifyContent="center" id="stack">
+            <Col>
+              <svg
+                id="left-arrow"
+                xmlns="http://www.w3.org/2000/svg"
+                width="30"
+                height="30"
+                fill="currentColor"
+                class="bi bi-arrow-left"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"
+                />
+              </svg>
 
-                                <svg id="right-arrow" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
-                                    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
-                                </svg>
-                            </Col>
-                            </Stack>
-                        
-                    </Row>
-                </Container>
+              <Image
+                alt="salads"
+                style={{ width: 217, height: 217 }}
+                src="https://images.pexels.com/photos/2097090/pexels-photo-2097090.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                rounded
+              />
+              <Image
+                alt="pastas"
+                style={{ width: 217, height: 217 }}
+                src="https://images.pexels.com/photos/10456299/pexels-photo-10456299.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                rounded
+              />
+              <Image
+                alt="mains&sides"
+                style={{ width: 217, height: 217 }}
+                src="https://images.pexels.com/photos/7627422/pexels-photo-7627422.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                rounded
+              />
+              <Image
+                alt="sandwiches"
+                style={{ width: 217, height: 217 }}
+                src="https://img.freepik.com/free-photo/top-view-delicious-sandwiches-with-green-salad-ham-tomatoes_140725-29809.jpg?w=1380&t=st=1697242388~exp=1697242988~hmac=da24d8e64b0103d188125e9bc5a064eb5777231b209f2fe19a58744b04f1e9db"
+                rounded
+              />
+              <Image
+                alt="tacos"
+                style={{ width: 217, height: 217 }}
+                src="https://images.pexels.com/photos/4958730/pexels-photo-4958730.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                rounded
+              />
 
-            <Container id="section-5" fluid>
-                <Row>
-                    <Col>
-                        <h1>Ditch the grocery store.</h1>
-                        <h3>This is convenience in a box.</h3>
-                        {/* <Carousel id="image-carousel-ingredients" align="center"></Carousel> */}
-                    </Col>
-                </Row>
-                <Row>
-                    <Col>
-                    <svg id="left-arrow" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
-                    </svg>
-                    <Figure>
-                        <Figure.Image
-                            width={217}
-                            height={278}
-                            alt="meatandseafood"
-                            src="https://images.pexels.com/photos/17949898/pexels-photo-17949898/free-photo-of-a-steak-on-a-wooden-cutting-board.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-                            rounded
-                        />
-                        <Figure.Caption id="sea-cap" style={{ color: "white"}}>
-                            Meat & Seafood
-                        </Figure.Caption>
-                    </Figure>
-                    <Figure>
-                        <Figure.Image
-                            width={217}
-                            height={278}
-                            alt="freshproduce"
-                            src="https://images.pexels.com/photos/6608618/pexels-photo-6608618.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-                            rounded
-                        />
-                        <Figure.Caption id="produce-cap" style={{ color: "white"}}>
-                            Fresh Produce
-                        </Figure.Caption>
-                    </Figure>
-                    <Figure>
-                        <Figure.Image
-                            width={217}
-                            height={278}
-                            alt="bakedgoods"
-                            src="https://images.pexels.com/photos/6608542/pexels-photo-6608542.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-                            rounded
-                        />
-                        <Figure.Caption id="baked-cap" style={{ color: "white"}}>
-                            Baked Goods
-                        </Figure.Caption>
-                    </Figure>
-                    <Figure>
-                        <Figure.Image
-                            width={217}
-                            height={278}
-                            alt="diaryandeggs"
-                            src="https://images.pexels.com/photos/7118899/pexels-photo-7118899.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-                            rounded
-                        />
-                        <Figure.Caption id="dairy-cap" style={{ color: "white"}}>
-                            Dairy & Eggs
-                        </Figure.Caption>
-                    </Figure>
-                    <Figure>
-                        <Figure.Image
-                            width={217}
-                            height={278}
-                            alt="plantbasedprotein"
-                            src="https://images.pexels.com/photos/9811630/pexels-photo-9811630.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-                            rounded
-                        />
-                        <Figure.Caption id="plant-cap" style={{ color: "white"}}>
-                            Plantbased Protein
-                        </Figure.Caption>
-                    </Figure>
-                    <svg id="right-arrow" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
-                    </svg>
-                    </Col>
-                </Row>
-            </Container>
+              <svg
+                id="right-arrow"
+                xmlns="http://www.w3.org/2000/svg"
+                width="30"
+                height="30"
+                fill="currentColor"
+                class="bi bi-arrow-right"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"
+                />
+              </svg>
+            </Col>
+          </Stack>
+        </Row>
+      </Container>
 
-            <Container id="section-6" fluid>
-                <Row>
-                    <Col>
-                        <h2 className="s6-h2">Ready to get started?</h2>
-                        <Button
-                            id="quiz-button"
-                            size="sm"
-                            variant="dark">
-                            Take the quiz
-                        </Button>
-                    </Col>
-                </Row>
-            </Container>
+      <Container id="section-5" fluid>
+        <Row>
+          <Col>
+            <h1>Ditch the grocery store.</h1>
+            <h3>This is convenience in a box.</h3>
+            {/* <Carousel id="image-carousel-ingredients" align="center"></Carousel> */}
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            <svg
+              id="left-arrow"
+              xmlns="http://www.w3.org/2000/svg"
+              width="30"
+              height="30"
+              fill="currentColor"
+              class="bi bi-arrow-left"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"
+              />
+            </svg>
+            <Figure>
+              <Figure.Image
+                width={217}
+                height={278}
+                alt="meatandseafood"
+                src="https://images.pexels.com/photos/17949898/pexels-photo-17949898/free-photo-of-a-steak-on-a-wooden-cutting-board.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                rounded
+              />
+              <Figure.Caption id="sea-cap" style={{ color: "white" }}>
+                Meat & Seafood
+              </Figure.Caption>
+            </Figure>
+            <Figure>
+              <Figure.Image
+                width={217}
+                height={278}
+                alt="freshproduce"
+                src="https://images.pexels.com/photos/6608618/pexels-photo-6608618.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                rounded
+              />
+              <Figure.Caption id="produce-cap" style={{ color: "white" }}>
+                Fresh Produce
+              </Figure.Caption>
+            </Figure>
+            <Figure>
+              <Figure.Image
+                width={217}
+                height={278}
+                alt="bakedgoods"
+                src="https://images.pexels.com/photos/6608542/pexels-photo-6608542.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                rounded
+              />
+              <Figure.Caption id="baked-cap" style={{ color: "white" }}>
+                Baked Goods
+              </Figure.Caption>
+            </Figure>
+            <Figure>
+              <Figure.Image
+                width={217}
+                height={278}
+                alt="diaryandeggs"
+                src="https://images.pexels.com/photos/7118899/pexels-photo-7118899.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                rounded
+              />
+              <Figure.Caption id="dairy-cap" style={{ color: "white" }}>
+                Dairy & Eggs
+              </Figure.Caption>
+            </Figure>
+            <Figure>
+              <Figure.Image
+                width={217}
+                height={278}
+                alt="plantbasedprotein"
+                src="https://images.pexels.com/photos/9811630/pexels-photo-9811630.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                rounded
+              />
+              <Figure.Caption id="plant-cap" style={{ color: "white" }}>
+                Plantbased Protein
+              </Figure.Caption>
+            </Figure>
+            <svg
+              id="right-arrow"
+              xmlns="http://www.w3.org/2000/svg"
+              width="30"
+              height="30"
+              fill="currentColor"
+              class="bi bi-arrow-right"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"
+              />
+            </svg>
+          </Col>
+        </Row>
+      </Container>
 
-            <Container id="section-7" fluid>
-                <Row>
-                    <h1 className="s7-h1">iPrep customers have good things to say:</h1>
-                </Row>
-                <Row>
-                    <Col id="review-1">
-                        <Image
-                            alt="Hannah"
-                            id="hannah-avatar"
-                            src="https://images.pexels.com/photos/2709388/pexels-photo-2709388.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                            style={{ width: 193}}
-                            rounded
-                        />
-                        <p>iPrep has changed my life for the better! I can't believe I have only just found it! I will recommend this meal kit company to everyone I know. The meals are so tasty. I was surprised at first, but I'm so glad I tried something new! Love, love, love iPrep!</p>
-                        <h3>Hannah B.</h3>
-                        <Image
-                            alt="Hannah's-food"
-                            id="hannahs-food"
-                            src="https://images.pexels.com/photos/1351238/pexels-photo-1351238.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                            style={{ width: 193 }}
-                            rounded
-                        />
-                    </Col>
-                    <Col id="review-2">
-                        <Image
-                            alt="Justin"
-                            id="justin-avatar"
-                            src="https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                            style={{ width: 193}}
-                            rounded
-                        />
-                        <p>I have to say, iPrep turned out to be an extremely convenient tool fo rme as I am usually too busy from work and don't really feel like making anything complicated. The recipes I use from my meal kit are easy and extremely practicaly for what I need.</p>
-                        <h3>Justin T.</h3>
-                        <Image
-                            alt="Justin's-food"
-                            id="justins-food"
-                            src="https://images.pexels.com/photos/1640775/pexels-photo-1640775.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                            style={{ width: 193 }}
-                            rounded
-                        />
-                    </Col>
-                    <Col id="review-3">
-                        <Image 
-                            alt="Carlos"
-                            id="carlos-avatar"
-                            src="https://images.pexels.com/photos/1205033/pexels-photo-1205033.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                            style={{ width: 193}}
-                            rounded
-                        />
-                        <p>Let's GOOOOO!!!!! iPrep is everything they say and more. I started off taking the quiz and ended up with a kit that was able to meet all of my dietary needs. Only tried a couple of recipes so far, but every single one has been delicious, chef-worthy stuff. Definitely coming back to iPrep for more!</p>
-                        <h3>Carlos S.</h3>
-                        <Image
-                            alt="Carlos'-food"
-                            id="carlos-food"
-                            src="https://images.pexels.com/photos/1247677/pexels-photo-1247677.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                            style={{ width: 193 }}
-                            rounded
-                            />
-                    </Col>
-                </Row>
-                {/* <Row>
+      <Container id="section-6" fluid>
+        <Row>
+          <Col>
+            <h2 className="s6-h2">Ready to get started?</h2>
+            <Button id="quiz-button" size="sm" variant="dark">
+              Take the quiz
+            </Button>
+          </Col>
+        </Row>
+      </Container>
+
+      <Container id="section-7" fluid>
+        <Row>
+          <h1 className="s7-h1">iPrep customers have good things to say:</h1>
+        </Row>
+        <Row>
+          <Col id="review-1">
+            <Image
+              alt="Hannah"
+              id="hannah-avatar"
+              src="https://images.pexels.com/photos/2709388/pexels-photo-2709388.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              style={{ width: 193 }}
+              rounded
+            />
+            <p>
+              iPrep has changed my life for the better! I can't believe I have
+              only just found it! I will recommend this meal kit company to
+              everyone I know. The meals are so tasty. I was surprised at first,
+              but I'm so glad I tried something new! Love, love, love iPrep!
+            </p>
+            <h3>Hannah B.</h3>
+            <Image
+              alt="Hannah's-food"
+              id="hannahs-food"
+              src="https://images.pexels.com/photos/1351238/pexels-photo-1351238.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              style={{ width: 193 }}
+              rounded
+            />
+          </Col>
+          <Col id="review-2">
+            <Image
+              alt="Justin"
+              id="justin-avatar"
+              src="https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              style={{ width: 193 }}
+              rounded
+            />
+            <p>
+              I have to say, iPrep turned out to be an extremely convenient tool
+              fo rme as I am usually too busy from work and don't really feel
+              like making anything complicated. The recipes I use from my meal
+              kit are easy and extremely practicaly for what I need.
+            </p>
+            <h3>Justin T.</h3>
+            <Image
+              alt="Justin's-food"
+              id="justins-food"
+              src="https://images.pexels.com/photos/1640775/pexels-photo-1640775.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              style={{ width: 193 }}
+              rounded
+            />
+          </Col>
+          <Col id="review-3">
+            <Image
+              alt="Carlos"
+              id="carlos-avatar"
+              src="https://images.pexels.com/photos/1205033/pexels-photo-1205033.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              style={{ width: 193 }}
+              rounded
+            />
+            <p>
+              Let's GOOOOO!!!!! iPrep is everything they say and more. I started
+              off taking the quiz and ended up with a kit that was able to meet
+              all of my dietary needs. Only tried a couple of recipes so far,
+              but every single one has been delicious, chef-worthy stuff.
+              Definitely coming back to iPrep for more!
+            </p>
+            <h3>Carlos S.</h3>
+            <Image
+              alt="Carlos'-food"
+              id="carlos-food"
+              src="https://images.pexels.com/photos/1247677/pexels-photo-1247677.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              style={{ width: 193 }}
+              rounded
+            />
+          </Col>
+        </Row>
+        {/* <Row>
                     <Accordion>Read More Reviews</Accordion>
                 </Row> */}
-            </Container>
+      </Container>
 
-            <Navbar id="nav" position="relative">
-                <Container>
-                    <Row>
-                        <Col xs={1}>
-                            <Navbar.Brand id="home-link" href="#home">iPrep</Navbar.Brand>
-                            <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                            <Navbar.Collapse id="basic-navbar-nav"/>
-                        </Col>
-                        <Col xs={2}>
-                            <Nav>
-                                <Nav.Link id="quiz-link" href="#quiz">quiz</Nav.Link>
-                                <Nav.Link id="recipes-link" href="#recipes">recipes</Nav.Link>
-                                <Nav.Link id="cart-link" href="#cart">cart</Nav.Link>
-                            </Nav>
-                        </Col>
-                        <Col xs={3}></Col>
-                        <Col xs={6}>
-                            <Nav>
-                                <Nav.Link id="contactus-link" href="#contactus">contact us</Nav.Link>
-                                <Nav.Link id="faq-link" href="#faq">FAQ</Nav.Link>
-                                <Nav.Link id="blog-link" href="#blog">blog</Nav.Link>
-                                <Nav.Link id="instagram-link" href="#instagram">instagram</Nav.Link>
-                                <Nav.Link id="facebook-link" href="#facebook">facebook</Nav.Link>
-                            </Nav>
-                        </Col>
-                    </Row>
-                </Container>
-            </Navbar>
-            
-        </div>
-    )
-};
+      <Navbar id="nav" position="relative">
+        <Container>
+          <Row>
+            <Col xs={1}>
+              <Navbar.Brand id="home-link" href="#home">
+                iPrep
+              </Navbar.Brand>
+              <Navbar.Toggle aria-controls="basic-navbar-nav" />
+              <Navbar.Collapse id="basic-navbar-nav" />
+            </Col>
+            <Col xs={2}>
+              <Nav>
+                <Nav.Link id="quiz-link" href="#quiz">
+                  quiz
+                </Nav.Link>
+                <Nav.Link id="recipes-link" href="#recipes">
+                  recipes
+                </Nav.Link>
+                <Nav.Link id="cart-link" href="#cart">
+                  cart
+                </Nav.Link>
+              </Nav>
+            </Col>
+            <Col xs={3}></Col>
+            <Col xs={6}>
+              <Nav>
+                <Nav.Link id="contactus-link" href="#contactus">
+                  contact us
+                </Nav.Link>
+                <Nav.Link id="faq-link" href="#faq">
+                  FAQ
+                </Nav.Link>
+                <Nav.Link id="blog-link" href="#blog">
+                  blog
+                </Nav.Link>
+                <Nav.Link id="instagram-link" href="#instagram">
+                  instagram
+                </Nav.Link>
+                <Nav.Link id="facebook-link" href="#facebook">
+                  facebook
+                </Nav.Link>
+              </Nav>
+            </Col>
+          </Row>
+        </Container>
+      </Navbar>
+    </div>
+  );
+}
