@@ -1,23 +1,24 @@
 import React from 'react';
 import './Homepage.css';
 import "bootstrap/dist/css/bootstrap.min.css";
-import Accordion from 'react-bootstrap/Accordion';
+//import Accordion from 'react-bootstrap/Accordion';
 import Button from 'react-bootstrap/Button'
-import Carousel from 'react-bootstrap/Carousel';
+//import Carousel from 'react-bootstrap/Carousel';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
+import Figure from 'react-bootstrap/Figure';
 import Image from 'react-bootstrap/Image';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Ratio from 'react-bootstrap/Ratio';
 import Row from 'react-bootstrap/Row';
 import Stack from 'react-bootstrap/Stack';
-import './media/video-yellow-pepper(2160p).mp4';
+//import './media/video-yellow-pepper(2160p).mp4';
 
 export default function Homepage() {
 
     return (
-        <>
+        <div id="home">
             <Container id="section-1" className="header" fluid>
                 <Row>
                     <Col>
@@ -25,16 +26,16 @@ export default function Homepage() {
                     </Col>
                     <Col xs={6}></Col>
                     <Col>
-                        <button id="login-button" className="btn btn-primary">Login</button>
+                        <button id="login-button" className="btn btn-primary" style={{ backgroundColor: "#D9ECF2", paddingTop: 10, paddingLeft: 15, paddingRight: 15, color: "black"}}>Login</button>
                         <button id="signup-button" className="btn btn-outline-light">Sign Up</button>
                     </Col>
                 </Row>   
             </Container>
      
-            <Container id="section-2" fluid>
+            {/* <Container id="section-2" fluid>
                 <Row>
                     <Col>
-                        <div style={{ width:1000, height: "auto", marginTop: 170}}>
+                        <div style={{ width:1412, height: "auto", marginTop: 170, marginLeft: -12}}>
                             <Ratio aspectRatio="16x9">
                                 <img
                                     alt="blue-counter-img"
@@ -49,15 +50,45 @@ export default function Homepage() {
                         <Button id="quiz-button" variant="dark" size="sm">Take the quiz</Button> 
                     </Col>
                 </Row>
-            </Container>
+            </Container> */}
+
+            <div class="container" id="section-2"> This code successfully overlays the text onto the image background, but I'm having trouble getting the image to fill the container.
+                <div class="row">
+                    <div class="col">
+                        <div class="bluebackground">
+                            <h1 className="s2-h1">Perfectly curated, easy, and healthy.</h1>
+                            <h3 className="s2-h3">Bringing groceries to you based on what you like with recipes so you can prep like a champ.</h3>
+                            <Button id="quiz-button" variant="dark" size="sm">Take the quiz</Button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {/* <div class="container"> This code doesn't even come close to achieving the desired result.
+                <div class="row">
+                    <div class="col">
+                        <div class="bluebackground">
+                            <img alt="bluebg" src="https://images.pexels.com/photos/1640774/pexels-photo-1640774.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" class="img-responsive"/>
+                            <span class="overlay-text">
+                                <h1 className="s2-h1">Perfectly curated, easy, and healthy.</h1>
+                                <h3 className="s2-h3">Bringing groceries to you based on what you like with recipes so you can prep like a champ.</h3>
+                                <Button id="quiz-button" variant="dark" size="sm">Take the quiz</Button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div> */}
 
             <Container id="section-3" fluid>
                 <Row>
                     <Col>
-                        <div style={{ width: 660, height: 'auto'}}>
+                        <div style={{ width: 660 }}>
                             <Ratio aspectRatio="16x9">
-                                <embed type="video/mp4" src="https://www.pexels.com/video/person-slicing-a-yellow-bell-pepper-3192257/" autoplay loop />
+                                {/* <video src="video-yellow-pepper(2160p).mp4"></video> THIS DOESN'T WORK AND DOESN'T SHOW ANYTHING AT ALL*/}
+                                <embed type="video/mp4" src="video (240p).mp4" autoplay/>
+                                {/* video (240p).mp4 */}
                                 {/* /media/video-yellow-pepper(2160p).mp4 */}
+                                {/* https://www.pexels.com/video/person-slicing-a-yellow-bell-pepper-3192257/ */}
                             </Ratio>
                         </div>
                     </Col>
@@ -80,9 +111,9 @@ export default function Homepage() {
                     <h3 className="s4-h3">Quick cook time and diet friendly.</h3>
                 </Row>
                 <Row>
-                    <Carousel id="image-carousel-dishes" align="center">
-                            <Carousel.Item style={{ width: 217, height: 217}}>
-                                <Ratio aspectRatio={1/2}>
+                    {/* <Carousel id="image-carousel-dishes" align="center">
+                            <Carousel.Item>
+                                <Ratio aspectRatio="16x9">
                                     <img
                                         className="salad"
                                         src="https://images.pexels.com/photos/2097090/pexels-photo-2097090.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
@@ -137,30 +168,106 @@ export default function Homepage() {
                             </Carousel.Item>
                         </Carousel>
                     </Row>
+                </Container> */}
+                        
+                            <Stack direction="row" spacing={2} justifyContent="center" id="stack">
+                            <Col>
+                                <svg id="left-arrow" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+                                </svg>
+
+                                <Image alt="salads" style={{ width: 217, height: 217 }} src="https://images.pexels.com/photos/2097090/pexels-photo-2097090.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" rounded />
+                                <Image alt="pastas" style={{ width: 217, height: 217 }} src="https://images.pexels.com/photos/10456299/pexels-photo-10456299.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" rounded />
+                                <Image alt="mains&sides" style={{ width: 217, height: 217 }} src="https://images.pexels.com/photos/7627422/pexels-photo-7627422.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" rounded/>
+                                <Image alt="sandwiches" style={{ width: 217, height: 217 }} src="https://img.freepik.com/free-photo/top-view-delicious-sandwiches-with-green-salad-ham-tomatoes_140725-29809.jpg?w=1380&t=st=1697242388~exp=1697242988~hmac=da24d8e64b0103d188125e9bc5a064eb5777231b209f2fe19a58744b04f1e9db" rounded/>
+                                <Image alt="tacos" style={{ width: 217, height: 217 }} src="https://images.pexels.com/photos/4958730/pexels-photo-4958730.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" rounded/>
+
+                                <svg id="right-arrow" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                                </svg>
+                            </Col>
+                            </Stack>
+                        
+                    </Row>
                 </Container>
-                    {/* <Stack direction="row" spacing={2} justifyContent="center">
-                    
-                    <svg id="left-arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
-                    </svg>
-
-                    <Image alt="salads" src="/media/plate-salad.jpg/" rounded />
-                    <Image alt="pastas" src="/media/plate1-pasta.png/" rounded />
-                    <Image alt="mains&sides" src="/media/p3.png/" rounded/>
-                    <Image alt="sandwiches" src="/media/p4.png/" rounded/>
-                    <Image alt="tacos" src="/media/carousel-tacos.jpg/171x180" rounded/>
-                    
-                    <svg id="right-arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
-                    </svg>
-
-                </Stack> */}
 
             <Container id="section-5" fluid>
                 <Row>
-                    <h1>Ditch the grocery store.</h1>
-                    <h3>This is convenience in a box.</h3>
-                    <Carousel id="image-carousel-ingredients" align="center"></Carousel>
+                    <Col>
+                        <h1>Ditch the grocery store.</h1>
+                        <h3>This is convenience in a box.</h3>
+                        {/* <Carousel id="image-carousel-ingredients" align="center"></Carousel> */}
+                    </Col>
+                </Row>
+                <Row>
+                    <Col>
+                    <svg id="left-arrow" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+                    </svg>
+                    <Figure>
+                        <Figure.Image
+                            width={217}
+                            height={278}
+                            alt="meatandseafood"
+                            src="https://images.pexels.com/photos/17949898/pexels-photo-17949898/free-photo-of-a-steak-on-a-wooden-cutting-board.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                            rounded
+                        />
+                        <Figure.Caption id="sea-cap" style={{ color: "white"}}>
+                            Meat & Seafood
+                        </Figure.Caption>
+                    </Figure>
+                    <Figure>
+                        <Figure.Image
+                            width={217}
+                            height={278}
+                            alt="freshproduce"
+                            src="https://images.pexels.com/photos/6608618/pexels-photo-6608618.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                            rounded
+                        />
+                        <Figure.Caption id="produce-cap" style={{ color: "white"}}>
+                            Fresh Produce
+                        </Figure.Caption>
+                    </Figure>
+                    <Figure>
+                        <Figure.Image
+                            width={217}
+                            height={278}
+                            alt="bakedgoods"
+                            src="https://images.pexels.com/photos/6608542/pexels-photo-6608542.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                            rounded
+                        />
+                        <Figure.Caption id="baked-cap" style={{ color: "white"}}>
+                            Baked Goods
+                        </Figure.Caption>
+                    </Figure>
+                    <Figure>
+                        <Figure.Image
+                            width={217}
+                            height={278}
+                            alt="diaryandeggs"
+                            src="https://images.pexels.com/photos/7118899/pexels-photo-7118899.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                            rounded
+                        />
+                        <Figure.Caption id="dairy-cap" style={{ color: "white"}}>
+                            Dairy & Eggs
+                        </Figure.Caption>
+                    </Figure>
+                    <Figure>
+                        <Figure.Image
+                            width={217}
+                            height={278}
+                            alt="plantbasedprotein"
+                            src="https://images.pexels.com/photos/9811630/pexels-photo-9811630.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                            rounded
+                        />
+                        <Figure.Caption id="plant-cap" style={{ color: "white"}}>
+                            Plantbased Protein
+                        </Figure.Caption>
+                    </Figure>
+                    <svg id="right-arrow" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                    </svg>
+                    </Col>
                 </Row>
             </Container>
 
@@ -238,9 +345,9 @@ export default function Homepage() {
                             />
                     </Col>
                 </Row>
-                <Row>
+                {/* <Row>
                     <Accordion>Read More Reviews</Accordion>
-                </Row>
+                </Row> */}
             </Container>
 
             <Navbar id="nav" position="relative">
@@ -272,6 +379,6 @@ export default function Homepage() {
                 </Container>
             </Navbar>
             
-        </>
+        </div>
     )
 };
