@@ -1,19 +1,21 @@
-import React from 'react';
-import './Homepage.css';
+import React from "react";
+import "./Homepage.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-//import Accordion from 'react-bootstrap/Accordion';
-import Button from 'react-bootstrap/Button'
-//import Carousel from 'react-bootstrap/Carousel';
-import Col from 'react-bootstrap/Col';
-import Container from 'react-bootstrap/Container';
+//import Accordion from "react-bootstrap/Accordion";
+import Button from "react-bootstrap/Button";
+//import Carousel from "react-bootstrap/Carousel";
+import Col from "react-bootstrap/Col";
+import Container from "react-bootstrap/Container";
 import Figure from 'react-bootstrap/Figure';
-import Image from 'react-bootstrap/Image';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import Ratio from 'react-bootstrap/Ratio';
-import Row from 'react-bootstrap/Row';
-import Stack from 'react-bootstrap/Stack';
-//import './media/video-yellow-pepper(2160p).mp4';
+import Image from "react-bootstrap/Image";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
+import Ratio from "react-bootstrap/Ratio";
+import Row from "react-bootstrap/Row";
+import Stack from "react-bootstrap/Stack";
+//import "./media/video-yellow-pepper(2160p).mp4";
+import { Link } from "react-router-dom";
+import { Logout } from "./components/logout" 
 
 export default function Homepage() {
 
