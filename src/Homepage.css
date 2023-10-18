@@ -1,4 +1,8 @@
 
+#home {
+    background-color: black;
+}
+
 /* SECTION 1 */
 
 .header {
@@ -28,6 +32,10 @@
     margin-bottom: 10px;
 }
 
+/* .login-button:focus { this code did not
+    outline: none;
+} */
+
 .signup-button {
     display: flexbox;
     /*justify-content: flex-end;*/
@@ -43,17 +51,30 @@
 
 /* SECTION 2 */
 
-.blue {
-    border: blue 4px;
-}
-
-.blue-counter-img {
+/* .blue-counter-img {
     display: flexbox;
     position: relative;
+    margin-left: auto;
+    margin-right: auto;
+} */
+
+.bluebackground {
+    background-image: url(https://images.pexels.com/photos/1640774/pexels-photo-1640774.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
+    background-size: cover;
 }
 
-.container-2 {
+/* .bluebackground > img, .overlay-text {
+    position: absolute;
+} */
+
+/* .container-2 {
     background-color: #D9ECF2 opacity .4;
+    z-index: 0;
+} */
+
+#section-2 {
+    margin-bottom: 2rem;
+    height: 525px;
 }
 
 .s2-h1 { /* Perfectly curated... */  
@@ -119,6 +140,7 @@ video {
     margin-top: 4rem;
     display: flexbox;
     position: relative;
+    color: white;
 }
 
 .s3-h4 { /*Check out our Recipe Catalog now to see how!*/
@@ -129,6 +151,7 @@ video {
     margin-right: auto;
     position: relative;
     display: flex;
+    color: white;
 }
 
 #recipes-button {
@@ -141,6 +164,8 @@ video {
 
 #section-4 {
     margin-bottom: 4rem;
+    height: 500px;
+    margin-top: 4rem;
 }
 
 .s4-h1 { /*Choose your favorites from our huge selection...*/
@@ -149,24 +174,59 @@ video {
     width: 300px;
     position: relative;
     display: grid;
+    color: white;
 }
 
 .s4-h3 {
     font-size: 32px;
     font-weight: 200;
     margin-bottom: 10px;
+    color: white;
+}
+
+#stack {
+    margin-top: 4rem;
+}
+
+#left-arrow {
+    margin-right: 2rem;
+    color: white;
+}
+
+#right-arrow {
+    margin-left: 2rem;
+    color: white;
 }
 
 .salad .pastas .mainssides .sandwiches .tacos {
     height: 500px!important;
+    color: white;
+}
+
+/* SECTION 5 */
+#section-5 h1{
+    margin-bottom: 1rem;
+    color: white;
+}
+
+#section-5 h3 {
+    margin-bottom: 4rem;
+    color: white;
 }
 
 /* SECTION 6 */
+
+#section-6 {
+    background-color: white;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
 
 .s6-h2 { /*Ready to get started?*/
     /*justify-content: center;*/
     margin-top: 4rem;
     margin-bottom: 1.5rem;
+    color: black;
 }
 
  #section-6 button {
@@ -177,6 +237,7 @@ video {
 
 .s7-h1 { /*iPrep customers have good things to say*/
     margin-bottom: 4rem;
+    color: white;
 }
 
 #hannah-avatar {
@@ -202,6 +263,10 @@ video {
 #carlos-food {
     margin-top: 1rem;
     margin-bottom: 4rem;
+}
+
+#section-7 p, #section-7 h3 {
+    color: white;
 }
 
 /* SECTION 8 */
