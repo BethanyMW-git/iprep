@@ -2,7 +2,7 @@ import React, {useState, useCallback } from "react";
 import Iprepsurvey from "../surveyTypes/surveytypeone";
 
 
-const SurveyOne = () => {
+export const SurveyOne = () => {
 
     const [showPage, setShowPage] = useState(true);
 
@@ -31,4 +31,4 @@ const SurveyOne = () => {
     )
 }
 
-export default SurveyOne
+// export default SurveyOne
