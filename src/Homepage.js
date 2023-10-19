@@ -28,8 +28,8 @@ export default function Homepage() {
   const setUserLoggedIn = (isLoggedIn) => dispatch(loggedIn(isLoggedIn));
 
   const handleLogout = () => {
-    console.log("hey friend you called?")
-    setUserLoggedIn(false)
+    console.log("hey friend you called?");
+    setUserLoggedIn(false);
   };
   return (
     <div id="home">
@@ -52,7 +52,7 @@ export default function Homepage() {
                       paddingLeft: 15,
                       paddingRight: 15,
                       color: "black",
-                      marginTop: 60
+                      marginTop: 60,
                     }}
                   >
                     Login
@@ -63,9 +63,9 @@ export default function Homepage() {
                     id="signup-button"
                     className="btn btn-outline-light"
                     style={{
-                        marginTop: 60
+                      marginTop: 60,
                     }}
-                >
+                  >
                     Sign Up
                   </button>
                 </Link>
@@ -108,9 +108,11 @@ export default function Homepage() {
                 Bringing groceries to you based on what you like with recipes so
                 you can prep like a champ.
               </h3>
-              <Button id="quiz-button" variant="dark" size="sm">
-                Take the quiz
-              </Button>
+              <Link to="/survey">
+                <Button id="quiz-button" variant="dark" size="sm">
+                  Take the quiz
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
@@ -399,9 +401,11 @@ export default function Homepage() {
         <Row>
           <Col>
             <h2 className="s6-h2">Ready to get started?</h2>
-            <Button id="quiz-button" size="sm" variant="light">
-              Take the quiz
-            </Button>
+            <Link to="/survey">
+              <Button id="quiz-button" size="sm" variant="light">
+                Take the quiz
+              </Button>
+            </Link>
           </Col>
         </Row>
       </Container>
@@ -499,9 +503,10 @@ export default function Homepage() {
             </Col>
             <Col xs={2}>
               <Nav>
-                <Nav.Link id="quiz-link" href="#quiz">
+                <Nav.Link href="/survey" id="quiz-link">
                   quiz
                 </Nav.Link>
+
                 <Nav.Link id="recipes-link" href="#recipes">
                   recipes
                 </Nav.Link>
