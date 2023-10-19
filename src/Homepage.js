@@ -444,7 +444,7 @@ export default function Homepage() {
             />
             <p>
               I have to say, iPrep turned out to be an extremely convenient tool
-              fo rme as I am usually too busy from work and don't really feel
+              for me as I am usually too busy from work and don't really feel
               like making anything complicated. The recipes I use from my meal
               kit are easy and extremely practicaly for what I need.
             </p>
