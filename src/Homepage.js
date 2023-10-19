@@ -138,8 +138,8 @@ export default function Homepage() {
                 <iframe
                     className="embed-responsive-item"
                     src="https://player.vimeo.com/video/876059352?badge=0&amp;loop=1&amp;autoplay=1&amp;autopause=0&amp;quality_selector=1&amp;progress_bar=1&amp;player_id=0&amp;app_id=58479"
-                    frameborder="0"
-                    allowfullscreen
+                    frameBorder="0"
+                    allowFullscreen
                     title="video (720p)">
                 </iframe>
             </div>
