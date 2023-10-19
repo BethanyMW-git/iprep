@@ -1,7 +1,7 @@
 
-#home {
+/* #home {
     background-color: black;
-}
+} */
 
 /* SECTION 1 */
 
@@ -25,6 +25,7 @@
     display: flexbox;
     position: relative;
     background-color: #D9ECF2; /*need to override*/
+    border-color: #D9ECF2; /*need to override*/
     color: black; /*need to override*/
     width: 100px;
     height: 55px;
@@ -46,7 +47,6 @@
     margin-right: -1000px;
     margin-top: 60px;
     margin-bottom: 10px;
-    margin-left: 1rem;
 }
 
 /* SECTION 2 */
@@ -120,16 +120,16 @@
     display: flexbox;
     position: relative;
     margin-bottom: 10px;
+    margin-left: 8rem;
 }
 
-video {
-    margin-top: 4rem;
-    /*margin-left: 4rem;*/
-    margin-right: 1rem;
-    /*padding: 10px;*/
-    /* background-color: red; comment out when video works */
-    display: flexbox;
-    position: relative;
+.embed-responsive-item {
+    width: 640px;
+    height: 360px;
+}
+
+.s3-text {
+    margin-right: 12rem;
 }
 
 .s3-h3 { /*We make it super easy to turn your grocery list...*/
@@ -137,10 +137,11 @@ video {
     font-weight: 200;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 4rem;
+    margin-top: 7rem;
     display: flexbox;
     position: relative;
-    color: white;
+    color: black;
+    width: 600px;
 }
 
 .s3-h4 { /*Check out our Recipe Catalog now to see how!*/
@@ -151,7 +152,8 @@ video {
     margin-right: auto;
     position: relative;
     display: flex;
-    color: white;
+    color: black;
+    justify-content: center;
 }
 
 #recipes-button {
@@ -165,23 +167,24 @@ video {
 #section-4 {
     margin-bottom: 4rem;
     height: 500px;
-    margin-top: 4rem;
+    margin-top: 8rem;
 }
 
 .s4-h1 { /*Choose your favorites from our huge selection...*/
     font-size: 64px;
+    /* margin-top: 8rem; Didn't affect the styling*/
     margin-bottom: 10px;
     width: 300px;
     position: relative;
     display: grid;
-    color: white;
+    color: black;
 }
 
 .s4-h3 {
     font-size: 32px;
     font-weight: 200;
     margin-bottom: 10px;
-    color: white;
+    color: black;
 }
 
 #stack {
@@ -190,34 +193,34 @@ video {
 
 #left-arrow {
     margin-right: 2rem;
-    color: white;
+    color: black;
 }
 
 #right-arrow {
     margin-left: 2rem;
-    color: white;
+    color: black;
 }
 
 .salad .pastas .mainssides .sandwiches .tacos {
     height: 500px!important;
-    color: white;
+    /* color: black; */
 }
 
 /* SECTION 5 */
-#section-5 h1{
+#section-5 h1{ /*Ditch the grocery store.*/
     margin-bottom: 1rem;
-    color: white;
+    color: black;
 }
 
-#section-5 h3 {
+#section-5 h3 { /*This is convenience in a box.*/
     margin-bottom: 4rem;
-    color: white;
+    color: black;
 }
 
 /* SECTION 6 */
 
 #section-6 {
-    background-color: white;
+    background-color: black;
     margin-top: 4rem;
     margin-bottom: 4rem;
 }
@@ -226,18 +229,18 @@ video {
     /*justify-content: center;*/
     margin-top: 4rem;
     margin-bottom: 1.5rem;
-    color: black;
+    color: white;
 }
 
  #section-6 button {
     margin-bottom: 4rem;
 }
 
-/* SECTION 7 */
+/* SECTION 7 (The Reviews) */
 
 .s7-h1 { /*iPrep customers have good things to say*/
     margin-bottom: 4rem;
-    color: white;
+    color: black;
 }
 
 #hannah-avatar {
@@ -266,7 +269,13 @@ video {
 }
 
 #section-7 p, #section-7 h3 {
-    color: white;
+    color: black;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#section-7 p {
+    width: 300px;
 }
 
 /* SECTION 8 */

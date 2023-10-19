@@ -11,7 +11,7 @@ import Figure from "react-bootstrap/Figure";
 import Image from "react-bootstrap/Image";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import Ratio from "react-bootstrap/Ratio";
+//import Ratio from "react-bootstrap/Ratio";
 import Row from "react-bootstrap/Row";
 import Stack from "react-bootstrap/Stack";
 //import "./media/video-yellow-pepper(2160p).mp4";
@@ -52,13 +52,20 @@ export default function Homepage() {
                       paddingLeft: 15,
                       paddingRight: 15,
                       color: "black",
+                      marginTop: 60
                     }}
                   >
                     Login
                   </button>
                 </Link>
                 <Link to="/register">
-                  <button id="signup-button" className="btn btn-outline-light">
+                  <button
+                    id="signup-button"
+                    className="btn btn-outline-light"
+                    style={{
+                        marginTop: 60
+                    }}
+                >
                     Sign Up
                   </button>
                 </Link>
@@ -127,17 +134,17 @@ export default function Homepage() {
       <Container id="section-3" fluid>
         <Row>
           <Col>
-            <div style={{ width: 660 }}>
-              <Ratio aspectRatio="16x9">
-                {/* <video src="video-yellow-pepper(2160p).mp4"></video> THIS DOESN'T WORK AND DOESN'T SHOW ANYTHING AT ALL*/}
-                <embed type="video/mp4" src="video (240p).mp4" autoPlay />
-                {/* video (240p).mp4 */}
-                {/* /media/video-yellow-pepper(2160p).mp4 */}
-                {/* https://www.pexels.com/video/person-slicing-a-yellow-bell-pepper-3192257/ */}
-              </Ratio>
+            <div id="pepper" className="embed-responsive embed-responsive-16by9">
+                <iframe
+                    className="embed-responsive-item"
+                    src="https://player.vimeo.com/video/876059352?badge=0&amp;loop=1&amp;autoplay=1&amp;autopause=0&amp;quality_selector=1&amp;progress_bar=1&amp;player_id=0&amp;app_id=58479"
+                    frameborder="0"
+                    allowfullscreen
+                    title="video (720p)">
+                </iframe>
             </div>
           </Col>
-          <Col>
+          <Col className="s3-text">
             <h3 className="s3-h3">
               We make it super easy to turn your grocery list into dinner while
               saving you time.
@@ -318,7 +325,7 @@ export default function Homepage() {
                 src="https://images.pexels.com/photos/17949898/pexels-photo-17949898/free-photo-of-a-steak-on-a-wooden-cutting-board.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
                 rounded
               />
-              <Figure.Caption id="sea-cap" style={{ color: "white" }}>
+              <Figure.Caption id="sea-cap" style={{ color: "black" }}>
                 Meat & Seafood
               </Figure.Caption>
             </Figure>
@@ -330,7 +337,7 @@ export default function Homepage() {
                 src="https://images.pexels.com/photos/6608618/pexels-photo-6608618.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
                 rounded
               />
-              <Figure.Caption id="produce-cap" style={{ color: "white" }}>
+              <Figure.Caption id="produce-cap" style={{ color: "black" }}>
                 Fresh Produce
               </Figure.Caption>
             </Figure>
@@ -342,7 +349,7 @@ export default function Homepage() {
                 src="https://images.pexels.com/photos/6608542/pexels-photo-6608542.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
                 rounded
               />
-              <Figure.Caption id="baked-cap" style={{ color: "white" }}>
+              <Figure.Caption id="baked-cap" style={{ color: "black" }}>
                 Baked Goods
               </Figure.Caption>
             </Figure>
@@ -354,7 +361,7 @@ export default function Homepage() {
                 src="https://images.pexels.com/photos/7118899/pexels-photo-7118899.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
                 rounded
               />
-              <Figure.Caption id="dairy-cap" style={{ color: "white" }}>
+              <Figure.Caption id="dairy-cap" style={{ color: "black" }}>
                 Dairy & Eggs
               </Figure.Caption>
             </Figure>
@@ -366,7 +373,7 @@ export default function Homepage() {
                 src="https://images.pexels.com/photos/9811630/pexels-photo-9811630.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
                 rounded
               />
-              <Figure.Caption id="plant-cap" style={{ color: "white" }}>
+              <Figure.Caption id="plant-cap" style={{ color: "black" }}>
                 Plantbased Protein
               </Figure.Caption>
             </Figure>
@@ -392,7 +399,7 @@ export default function Homepage() {
         <Row>
           <Col>
             <h2 className="s6-h2">Ready to get started?</h2>
-            <Button id="quiz-button" size="sm" variant="dark">
+            <Button id="quiz-button" size="sm" variant="light">
               Take the quiz
             </Button>
           </Col>
