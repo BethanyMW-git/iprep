@@ -1,4 +1,5 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import "./Homepage.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 //import Accordion from "react-bootstrap/Accordion";
@@ -14,10 +15,22 @@ import Ratio from "react-bootstrap/Ratio";
 import Row from "react-bootstrap/Row";
 import Stack from "react-bootstrap/Stack";
 //import "./media/video-yellow-pepper(2160p).mp4";
+import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
+import { selectIsUserLoggedIn } from "./redux/userReducer";
 import { Logout } from "./components/logout";
+import { loggedIn } from "./redux/userReducer";
 
 export default function Homepage() {
+  const isUserLoggedIn = useSelector(selectIsUserLoggedIn);
+
+  const dispatch = useDispatch();
+  const setUserLoggedIn = (isLoggedIn) => dispatch(loggedIn(isLoggedIn));
+
+  const handleLogout = () => {
+    console.log("hey friend you called?")
+    setUserLoggedIn(false)
+  };
   return (
     <div id="home">
       <Container id="section-1" className="header" fluid>
@@ -27,27 +40,31 @@ export default function Homepage() {
           </Col>
           <Col xs={6}></Col>
           <Col>
-            <Link to="/login">
-              <button
-                id="login-button"
-                className="btn btn-primary"
-                style={{
-                  backgroundColor: "#D9ECF2",
-                  paddingTop: 10,
-                  paddingLeft: 15,
-                  paddingRight: 15,
-                  color: "black",
-                }}
-              >
-                Login
-              </button>
-            </Link>
-            <Link to="/register">
-              <button id="signup-button" className="btn btn-outline-light">
-                Sign Up
-              </button>
-            </Link>
-            <Logout />
+            {!isUserLoggedIn && (
+              <>
+                <Link to="/login">
+                  <button
+                    id="login-button"
+                    className="btn btn-primary"
+                    style={{
+                      backgroundColor: "#D9ECF2",
+                      paddingTop: 10,
+                      paddingLeft: 15,
+                      paddingRight: 15,
+                      color: "black",
+                    }}
+                  >
+                    Login
+                  </button>
+                </Link>
+                <Link to="/register">
+                  <button id="signup-button" className="btn btn-outline-light">
+                    Sign Up
+                  </button>
+                </Link>
+              </>
+            )}
+            {isUserLoggedIn && <Logout onHandleLogout={handleLogout} />}
           </Col>
         </Row>
       </Container>
@@ -72,13 +89,13 @@ export default function Homepage() {
                 </Row>
             </Container> */}
 
-      <div class="container" id="section-2">
+      <div className="container" id="section-2">
         {" "}
         This code successfully overlays the text onto the image background, but
         I'm having trouble getting the image to fill the container.
-        <div class="row">
-          <div class="col">
-            <div class="bluebackground">
+        <div className="row">
+          <div className="col">
+            <div className="bluebackground">
               <h1 className="s2-h1">Perfectly curated, easy, and healthy.</h1>
               <h3 className="s2-h3">
                 Bringing groceries to you based on what you like with recipes so
@@ -92,12 +109,12 @@ export default function Homepage() {
         </div>
       </div>
 
-      {/* <div class="container"> This code doesn't even come close to achieving the desired result.
-                <div class="row">
-                    <div class="col">
-                        <div class="bluebackground">
-                            <img alt="bluebg" src="https://images.pexels.com/photos/1640774/pexels-photo-1640774.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" class="img-responsive"/>
-                            <span class="overlay-text">
+      {/* <div className="container"> This code doesn't even come close to achieving the desired result.
+                <div className="row">
+                    <div className="col">
+                        <div className="bluebackground">
+                            <img alt="bluebg" src="https://images.pexels.com/photos/1640774/pexels-photo-1640774.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" className="img-responsive"/>
+                            <span className="overlay-text">
                                 <h1 className="s2-h1">Perfectly curated, easy, and healthy.</h1>
                                 <h3 className="s2-h3">Bringing groceries to you based on what you like with recipes so you can prep like a champ.</h3>
                                 <Button id="quiz-button" variant="dark" size="sm">Take the quiz</Button>
@@ -113,7 +130,7 @@ export default function Homepage() {
             <div style={{ width: 660 }}>
               <Ratio aspectRatio="16x9">
                 {/* <video src="video-yellow-pepper(2160p).mp4"></video> THIS DOESN'T WORK AND DOESN'T SHOW ANYTHING AT ALL*/}
-                <embed type="video/mp4" src="video (240p).mp4" autoplay />
+                <embed type="video/mp4" src="video (240p).mp4" autoPlay />
                 {/* video (240p).mp4 */}
                 {/* /media/video-yellow-pepper(2160p).mp4 */}
                 {/* https://www.pexels.com/video/person-slicing-a-yellow-bell-pepper-3192257/ */}
@@ -202,7 +219,7 @@ export default function Homepage() {
                     </Row>
                 </Container> */}
 
-          <Stack direction="row" spacing={2} justifyContent="center" id="stack">
+          <Stack direction="row" spacing={2} justifycontent="center" id="stack">
             <Col>
               <svg
                 id="left-arrow"
@@ -210,11 +227,11 @@ export default function Homepage() {
                 width="30"
                 height="30"
                 fill="currentColor"
-                class="bi bi-arrow-left"
+                className="bi bi-arrow-left"
                 viewBox="0 0 16 16"
               >
                 <path
-                  fill-rule="evenodd"
+                  fillRule="evenodd"
                   d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"
                 />
               </svg>
@@ -256,11 +273,11 @@ export default function Homepage() {
                 width="30"
                 height="30"
                 fill="currentColor"
-                class="bi bi-arrow-right"
+                className="bi bi-arrow-right"
                 viewBox="0 0 16 16"
               >
                 <path
-                  fill-rule="evenodd"
+                  fillRule="evenodd"
                   d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"
                 />
               </svg>
@@ -285,11 +302,11 @@ export default function Homepage() {
               width="30"
               height="30"
               fill="currentColor"
-              class="bi bi-arrow-left"
+              className="bi bi-arrow-left"
               viewBox="0 0 16 16"
             >
               <path
-                fill-rule="evenodd"
+                fillRule="evenodd"
                 d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"
               />
             </svg>
@@ -359,11 +376,11 @@ export default function Homepage() {
               width="30"
               height="30"
               fill="currentColor"
-              class="bi bi-arrow-right"
+              className="bi bi-arrow-right"
               viewBox="0 0 16 16"
             >
               <path
-                fill-rule="evenodd"
+                fillRule="evenodd"
                 d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"
               />
             </svg>
