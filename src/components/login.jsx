@@ -1,11 +1,18 @@
 import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
 import "../components/login-register.views.css";
 import { Link } from "react-router-dom";
+import { loggedIn } from "../redux/userReducer";
 
 export const Login = (props) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [isUserLoggedIn, setIsUserLoggedIn] = useState(false);
+  const [hasError, setHasError] = useState(false);
+  const navigate = useNavigate();
+
+  const dispatch = useDispatch();
+  const setUserLoggedIn = (isLoggedIn) => dispatch(loggedIn(isLoggedIn));
 
   const handleSubmit = (e) => {
     const apiUrl = `http://localhost:4000/users/login`;
@@ -14,17 +21,20 @@ export const Login = (props) => {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({
-        email: email,
-        password: password,
-      }),
+      body: JSON.stringify({ email, password }),
     })
       .then((response) => {
         console.log(`response status: ${response.status}`);
         if (response.status === 200) {
-          setIsUserLoggedIn(true);
+          // setIsUserLoggedIn(true);
+          setUserLoggedIn(true);
+          navigate("/");
         } else {
-          setIsUserLoggedIn(false);
+          // setIsUserLoggedIn(false);
+          // TODO: add error handling. Which means what happens if they are not able to log in.
+          // Then show an error message.
+          setUserLoggedIn(false);
+          setHasError(true);
         }
       })
       .catch((error) => console.error("Error fetching data:", error));
@@ -37,12 +47,8 @@ export const Login = (props) => {
     <div className="Auth">
       <div className="auth-form-container">
         <h2>Login</h2>
-        <form
-          className="login-form"
-          onSubmit={handleSubmit}
-          action="/users/login"
-          method="POST"
-        >
+        {hasError && <div>{"There was an error"}</div>}
+        <form className="login-form" onSubmit={handleSubmit}>
           <label htmlFor="email">email</label>
           <input
             value={email}
