@@ -24,8 +24,8 @@ export const Logout = ({ onHandleLogout }) => {
 
   return (
     <div>
-      <button id="logout-button" onClick={handleLogout}>
-        Logout yo
+      <button style={{marginTop: 60, padding: 10}} id="logout-button" onClick={handleLogout}>
+        Logout
       </button>
     </div>
   );
