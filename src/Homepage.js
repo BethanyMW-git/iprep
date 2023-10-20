@@ -17,12 +17,16 @@ import Stack from "react-bootstrap/Stack";
 //import "./media/video-yellow-pepper(2160p).mp4";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
-import { selectIsUserLoggedIn } from "./redux/userReducer";
+import {
+  selectIsUserLoggedIn,
+  selectUserAccountName,
+} from "./redux/userReducer";
 import { Logout } from "./components/logout";
 import { loggedIn } from "./redux/userReducer";
 
 export default function Homepage() {
   const isUserLoggedIn = useSelector(selectIsUserLoggedIn);
+  const userAccountName = useSelector(selectUserAccountName);
 
   const dispatch = useDispatch();
   const setUserLoggedIn = (isLoggedIn) => dispatch(loggedIn(isLoggedIn));
@@ -39,6 +43,7 @@ export default function Homepage() {
             <h2 className="logo">iPrep</h2>
           </Col>
           <Col xs={6}></Col>
+
           <Col>
             {!isUserLoggedIn && (
               <>
@@ -71,6 +76,15 @@ export default function Homepage() {
                 </Link>
               </>
             )}
+            {isUserLoggedIn && (
+              <h3
+                className="username"
+                style={{ color: "#ffffff", marginTop: 30 }}
+              >
+                Welcome, {userAccountName}
+              </h3>
+            )}
+
             {isUserLoggedIn && <Logout onHandleLogout={handleLogout} />}
           </Col>
         </Row>
@@ -136,14 +150,17 @@ export default function Homepage() {
       <Container id="section-3" fluid>
         <Row>
           <Col>
-            <div id="pepper" className="embed-responsive embed-responsive-16by9">
-                <iframe
-                    className="embed-responsive-item"
-                    src="https://player.vimeo.com/video/876059352?badge=0&amp;loop=1&amp;autoplay=1&amp;autopause=0&amp;quality_selector=1&amp;progress_bar=1&amp;player_id=0&amp;app_id=58479"
-                    frameBorder="0"
-                    allowFullscreen
-                    title="video (720p)">
-                </iframe>
+            <div
+              id="pepper"
+              className="embed-responsive embed-responsive-16by9"
+            >
+              <iframe
+                className="embed-responsive-item"
+                src="https://player.vimeo.com/video/876059352?badge=0&amp;loop=1&amp;autoplay=1&amp;autopause=0&amp;quality_selector=1&amp;progress_bar=1&amp;player_id=0&amp;app_id=58479"
+                frameborder="0"
+                allowfullscreen
+                title="video (720p)"
+              ></iframe>
             </div>
           </Col>
           <Col className="s3-text">
