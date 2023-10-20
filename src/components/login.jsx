@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import "../components/login-register.views.css";
 import { Link } from "react-router-dom";
-import { loggedIn } from "../redux/userReducer";
+import { loggedIn, setUserName } from "../redux/userReducer";
 
 export const Login = (props) => {
   const [email, setEmail] = useState("");
@@ -13,6 +13,7 @@ export const Login = (props) => {
 
   const dispatch = useDispatch();
   const setUserLoggedIn = (isLoggedIn) => dispatch(loggedIn(isLoggedIn));
+  const setUserAccountName = (name) => dispatch(setUserName(name))
 
   const handleSubmit = (e) => {
     const apiUrl = `http://localhost:4000/users/login`;
@@ -26,11 +27,13 @@ export const Login = (props) => {
       .then((response) => {
         console.log(`response status: ${response.status}`);
         if (response.status === 200) {
-          // setIsUserLoggedIn(true);
           setUserLoggedIn(true);
-          navigate("/");
+          response.json().then(json => {
+            console.log(`user's name: ${json.name}`);
+            setUserAccountName(json.name);
+            navigate("/");
+          });
         } else {
-          // setIsUserLoggedIn(false);
           // TODO: add error handling. Which means what happens if they are not able to log in.
           // Then show an error message.
           setUserLoggedIn(false);

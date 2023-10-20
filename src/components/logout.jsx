@@ -24,7 +24,7 @@ export const Logout = ({ onHandleLogout }) => {
 
   return (
     <div>
-      <button style={{marginTop: 60, padding: 10}} id="logout-button" onClick={handleLogout}>
+      <button style={{marginTop: 10, padding: 10, borderRadius: 10}} id="logout-button" onClick={handleLogout}>
         Logout
       </button>
     </div>
