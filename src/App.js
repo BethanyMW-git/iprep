@@ -4,6 +4,7 @@ import Homepage from "./Homepage";
 import { Login } from "./components/login";
 import { Register } from "./components/register";
 import { SurveyOne } from "./surveycomponents/surveydisplay/displaysurvey";
+import { Checkout } from "./Checkout"
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/survey" element={<SurveyOne />} />
+          <Route path="/checkout" element={<Checkout />} />
         </Routes>
       </Router>
     </div>
