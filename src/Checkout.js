@@ -2,11 +2,11 @@
 import Button from "react-bootstrap/Button";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
-import Form from "react-boostrap/Form";
+import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
 
 
-export default function Checkout() {
+export const Checkout = () => {
     return (
         <div id="checkout-box">
             <Container>

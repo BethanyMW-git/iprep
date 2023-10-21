@@ -1,4 +1,3 @@
-
 /* #home {
     background-color: black;
 } */
@@ -6,31 +5,31 @@
 /* SECTION 1 */
 
 .header {
-    background-color: black;
-    height: 170px;
-    width: 1440px;
-    position: absolute;
+  background-color: black;
+  height: 170px;
+  width: 1440px;
+  position: absolute;
 }
 
 .logo {
-    color: white;
-    position: absolute;
-    display: flex;
-    margin-top: 4rem;
-    margin-left: 4rem;
-    font-size: 2rem;
+  color: white;
+  position: absolute;
+  display: flex;
+  margin-top: 4rem;
+  margin-left: 4rem;
+  font-size: 2rem;
 }
 
 .login-button {
-    display: flexbox;
-    position: relative;
-    background-color: #D9ECF2; /*need to override*/
-    border-color: #D9ECF2; /*need to override*/
-    color: black; /*need to override*/
-    width: 100px;
-    height: 55px;
-    margin-top: 4rem;
-    margin-bottom: 10px;
+  display: flexbox;
+  position: relative;
+  background-color: #d9ecf2; /*need to override*/
+  border-color: #d9ecf2; /*need to override*/
+  color: black; /*need to override*/
+  width: 100px;
+  height: 55px;
+  margin-top: 4rem;
+  margin-bottom: 10px;
 }
 
 /* .login-button:focus { this code did not
@@ -38,15 +37,15 @@
 } */
 
 .signup-button {
-    display: flexbox;
-    /*justify-content: flex-end;*/
-    position: relative;
-    color: white;
-    width: 100px;
-    height: 55px;
-    margin-right: -1000px;
-    margin-top: 60px;
-    margin-bottom: 10px;
+  display: flexbox;
+  /*justify-content: flex-end;*/
+  position: relative;
+  color: white;
+  width: 100px;
+  height: 55px;
+  margin-right: -1000px;
+  margin-top: 60px;
+  margin-bottom: 10px;
 }
 
 /* SECTION 2 */
@@ -59,8 +58,8 @@
 } */
 
 .bluebackground {
-    background-image: url(https://images.pexels.com/photos/1640774/pexels-photo-1640774.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
-    background-size: cover;
+  background-image: url(https://images.pexels.com/photos/1640774/pexels-photo-1640774.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
+  background-size: cover;
 }
 
 /* .bluebackground > img, .overlay-text {
@@ -73,217 +72,236 @@
 } */
 
 #section-2 {
-    margin-bottom: 2rem;
-    height: 525px;
+  margin-bottom: 2rem;
+  height: 525px;
 }
 
-.s2-h1 { /* Perfectly curated... */  
-    color: black;
-    font-size: 64px;
-    font-weight: 200;
-    position: relative;
-    display: flexbox;
-    margin-top: 12rem;
-    margin-bottom: 2rem;
-    margin-right: auto;
-    margin-left: auto;
-    /*max-width: 700px;*/
+.s2-h1 {
+  /* Perfectly curated... */
+  color: black;
+  font-size: 64px;
+  font-weight: 200;
+  position: relative;
+  display: flexbox;
+  margin-top: 12rem;
+  margin-bottom: 2rem;
+  margin-right: auto;
+  margin-left: auto;
+  /*max-width: 700px;*/
 }
 
-.s2-h3 { /*Bringing groceries to you based...*/
-    color: black;
-    font-size: 20px;
-    position: relative;
-    display: flexbox;
-    margin-top: 1rem;
-    margin-bottom: 2rem;
-    width: 500px;
-    margin-left: auto;
-    margin-right: auto;
-
+.s2-h3 {
+  /*Bringing groceries to you based...*/
+  color: black;
+  font-size: 20px;
+  position: relative;
+  display: flexbox;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .quiz-button {
-    background-color: black;
-    color: white;
-    margin-bottom: 4rem;
-    display: flexbox;
-    position: relative;
-    height: 15px;
-    margin-left: auto;
-    margin-right: auto;
+  background-color: black;
+  color: white;
+  margin-bottom: 4rem;
+  display: flexbox;
+  position: relative;
+  height: 15px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* SECTION 3 */
 
 #section-3 {
-    display: flexbox;
-    position: relative;
-    margin-bottom: 10px;
-    margin-left: 8rem;
+  /* display: flexbox; */
+  position: relative;
+  margin-bottom: 10px;
 }
 
 .embed-responsive-item {
-    width: 640px;
-    height: 360px;
+  width: 640px;
+  height: 360px;
 }
 
-.s3-text {
-    margin-right: 12rem;
+/* .s3-text {
+  margin-right: 12rem;
+} */
+
+.s3-h3 {
+  /*We make it super easy to turn your grocery list...*/
+  font-size: 30px;
+  font-weight: 200;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 7rem;
+  display: flexbox;
+  position: relative;
+  color: black;
+  width: 600px;
 }
 
-.s3-h3 { /*We make it super easy to turn your grocery list...*/
-    font-size: 30px;
-    font-weight: 200;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 7rem;
-    display: flexbox;
-    position: relative;
-    color: black;
-    width: 600px;
-}
-
-.s3-h4 { /*Check out our Recipe Catalog now to see how!*/
-    font-size: 22px;
-    font-weight: 200;
-    margin-top: 1rem;
-    margin-left: auto;
-    margin-right: auto;
-    position: relative;
-    display: flex;
-    color: black;
-    justify-content: center;
+.s3-h4 {
+  /*Check out our Recipe Catalog now to see how!*/
+  font-size: 22px;
+  font-weight: 200;
+  margin-top: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  display: flex;
+  color: black;
+  justify-content: center;
 }
 
 #recipes-button {
-    margin-top: 1rem;
-    margin-left: auto;
-    margin-right: auto;
+  margin-top: 1rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* SECTION 4 */
 
 #section-4 {
-    margin-bottom: 4rem;
-    height: 500px;
-    margin-top: 8rem;
+  margin-bottom: 4rem;
+  height: 500px;
+  margin-top: 8rem;
 }
 
-.s4-h1 { /*Choose your favorites from our huge selection...*/
-    font-size: 64px;
-    /* margin-top: 8rem; Didn't affect the styling*/
-    margin-bottom: 10px;
-    width: 300px;
-    position: relative;
-    display: grid;
-    color: black;
+.s4-h1 {
+  /*Choose your favorites from our huge selection...*/
+  font-size: 64px;
+  /* margin-top: 8rem; Didn't affect the styling*/
+  margin-bottom: 10px;
+  width: 300px;
+  position: relative;
+  display: grid;
+  color: black;
 }
 
 .s4-h3 {
-    font-size: 32px;
-    font-weight: 200;
-    margin-bottom: 10px;
-    color: black;
+  font-size: 32px;
+  font-weight: 200;
+  margin-bottom: 10px;
+  color: black;
 }
 
 #stack {
-    margin-top: 4rem;
+  margin-top: 4rem;
 }
 
 #left-arrow {
-    margin-right: 2rem;
-    color: black;
+  margin-right: 2rem;
+  color: black;
 }
 
 #right-arrow {
-    margin-left: 2rem;
-    color: black;
+  margin-left: 2rem;
+  color: black;
 }
 
 .salad .pastas .mainssides .sandwiches .tacos {
-    height: 500px!important;
-    /* color: black; */
+  height: 500px !important;
+  /* color: black; */
 }
 
 /* SECTION 5 */
-#section-5 h1{ /*Ditch the grocery store.*/
-    margin-bottom: 1rem;
-    color: black;
+#section-5 h1 {
+  /*Ditch the grocery store.*/
+  margin-bottom: 1rem;
+  color: black;
 }
 
-#section-5 h3 { /*This is convenience in a box.*/
-    margin-bottom: 4rem;
-    color: black;
+#section-5 h3 {
+  /*This is convenience in a box.*/
+  margin-bottom: 4rem;
+  color: black;
 }
 
 /* SECTION 6 */
 
 #section-6 {
-    background-color: black;
-    margin-top: 4rem;
-    margin-bottom: 4rem;
+  background-color: black;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
 }
 
-.s6-h2 { /*Ready to get started?*/
-    /*justify-content: center;*/
-    margin-top: 4rem;
-    margin-bottom: 1.5rem;
-    color: white;
+.s6-h2 {
+  /*Ready to get started?*/
+  /*justify-content: center;*/
+  margin-top: 4rem;
+  margin-bottom: 1.5rem;
+  color: white;
 }
 
- #section-6 button {
-    margin-bottom: 4rem;
+#section-6 button {
+  margin-bottom: 4rem;
 }
 
 /* SECTION 7 (The Reviews) */
 
-.s7-h1 { /*iPrep customers have good things to say*/
-    margin-bottom: 4rem;
-    color: black;
+.s7-h1 {
+  /*iPrep customers have good things to say*/
+  margin-bottom: 4rem;
+  color: black;
 }
 
 #hannah-avatar {
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
 #hannahs-food {
-    margin-top: 1rem;
+  margin-top: 1rem;
 }
 
 #justin-avatar {
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
 #justins-food {
-    margin-top: 1rem;
+  margin-top: 1rem;
 }
 
 #carlos-avatar {
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
 #carlos-food {
-    margin-top: 1rem;
-    margin-bottom: 4rem;
+  margin-top: 1rem;
+  margin-bottom: 4rem;
 }
 
-#section-7 p, #section-7 h3 {
-    color: black;
-    margin-right: auto;
-    margin-left: auto;
+#section-7 p,
+#section-7 h3 {
+  color: black;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 #section-7 p {
-    width: 300px;
+  width: 300px;
 }
 
 /* SECTION 8 */
 
 #nav {
-    height: 10rem;
-    background-color: #D9ECF2;
-    margin-top: 4rem;
+  height: 10rem;
+  background-color: #d9ecf2;
+  margin-top: 4rem;
+}
+
+.bottomNavBar {
+  max-width: 100% !important;
+  justify-content: center !important;
+  margin-right: 5%;
+  margin-left: 5%;
+}
+
+.buttom-links-nav {
+  justify-content: flex-end;
 }
 
 /* #home-link {
