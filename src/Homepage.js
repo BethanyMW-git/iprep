@@ -148,7 +148,8 @@ export default function Homepage() {
             </div> */}
 
       <Container id="section-3" fluid>
-        <Row>
+        <Row className="video-section-row">
+          <Col />
           <Col>
             <div
               id="pepper"
@@ -175,6 +176,7 @@ export default function Homepage() {
               Recipes
             </Button>
           </Col>
+          <Col />
         </Row>
       </Container>
 
@@ -509,8 +511,8 @@ export default function Homepage() {
       </Container>
 
       <Navbar id="nav" position="relative">
-        <Container>
-          <Row>
+        <Container className="bottomNavBar">
+          <Row className="container-fluid">
             <Col xs={1}>
               <Navbar.Brand id="home-link" href="#home">
                 iPrep
@@ -518,7 +520,7 @@ export default function Homepage() {
               <Navbar.Toggle aria-controls="basic-navbar-nav" />
               <Navbar.Collapse id="basic-navbar-nav" />
             </Col>
-            <Col xs={2}>
+            <Col xs={3}>
               <Nav>
                 <Nav.Link href="/survey" id="quiz-link">
                   quiz
@@ -527,14 +529,14 @@ export default function Homepage() {
                 <Nav.Link id="recipes-link" href="#recipes">
                   recipes
                 </Nav.Link>
-                <Nav.Link id="cart-link" href="#cart">
-                  cart
+                <Nav.Link href="/checkout" id="cart-link">
+                  checkout
                 </Nav.Link>
               </Nav>
             </Col>
-            <Col xs={3}></Col>
+            <Col xs={2}></Col>
             <Col xs={6}>
-              <Nav>
+              <Nav className="buttom-links-nav">
                 <Nav.Link id="contactus-link" href="#contactus">
                   contact us
                 </Nav.Link>
