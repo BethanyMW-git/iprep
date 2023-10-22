@@ -1,5 +1,9 @@
+#checkout-background {
+    background-repeat: no-repeat;
+}
+
 .checkout-box {
-    margin-top: 150px;
+    /* margin-top: 150px; */
     /* width: 50%; */
     margin-right: 25%;
     margin-left: 25%;

@@ -141,7 +141,7 @@
   display: flexbox;
   position: relative;
   color: black;
-  width: 600px;
+  /* width: 600px; */
 }
 
 .s3-h4 {
