@@ -4,14 +4,41 @@ import "./Checkout.css";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import Form from "react-bootstrap/Form";
+import Ratio from "react-bootstrap/Ratio";
 import Row from "react-bootstrap/Row";
 
 
 export const Checkout = () => {
     return (
-        <div id="checkout-box" style={{ marginTop: 150, width: "50%", marginRight: "25%", marginLeft: "25%" }}>
-            <Container>
-                <Row id="quiz-results">
+        <div 
+            id="checkout-background"
+            className="bg-image container-fluid"
+            style={{
+                backgroundImage: "url('https://cdn.pixabay.com/photo/2015/05/04/10/16/vegetables-752153_1280.jpg')",
+                backgroundSize: "cover",
+                height: "100vh",
+            }} >
+        <div
+            id="checkout-box"
+            style={{
+                width: "50%",
+                height: "70%",
+                marginRight: "25%",
+                marginLeft: "25%",
+                padding: "5%",
+                marginTop: "10%",
+                backgroundColor: "black",
+                opacity: .8, 
+                }}
+            className="
+                square 
+                border 
+                border-info 
+                border-2
+                rounded" 
+            >
+            <Container fluid>
+                <Row id="quiz-results" >
                     <Col>
                         <h3>Survey Results</h3>
                         <div id="results">
@@ -36,7 +63,7 @@ export const Checkout = () => {
                     <Col>
                         {/* Bronze
                         <input type="radio">$50/wk</input> */}
-                        <Form>
+                        <Form id="bronze">
                             <Form.Label>Bronze $50</Form.Label>
                             <Form.Check type="radio"></Form.Check>
                         </Form>
@@ -44,7 +71,7 @@ export const Checkout = () => {
                     <Col>
                         {/* Silver
                         <input type="radio">$100/wk</input> */}
-                        <Form>
+                        <Form id="silver">
                             <Form.Label>Silver $100/wk</Form.Label>
                             <Form.Check type="radio"></Form.Check>
                         </Form>
@@ -52,7 +79,7 @@ export const Checkout = () => {
                     <Col>
                         {/* Gold
                         <input type="radio">$150/wk</input> */}
-                        <Form>
+                        <Form id="gold">
                             <Form.Label>Gold $150/wk</Form.Label>
                             <Form.Check type="radio"></Form.Check>
                         </Form>
@@ -61,11 +88,15 @@ export const Checkout = () => {
                 <Row id="total">
                     <p>Total: $100</p>
                 </Row>
-                <Row id="checkout-button">
-                    <Button>Checkout</Button>
+                <Row id="checkout-button-row">
+                    <Button
+                        id="checkout-button"
+                        variant="info"
+                        style={{ backgroundImage:"-moz-linear-gradient(45deg,blue,white)"}}
+                    >Checkout</Button>
                 </Row>
             </Container>
         </div>
-        
+        </div>
     );
 };
