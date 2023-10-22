@@ -1,5 +1,6 @@
 import React, {useState, useCallback } from "react";
 import Iprepsurvey from "../surveyTypes/surveytypeone";
+import { Link } from "react-router-dom";
 
 
 export const SurveyOne = () => {
@@ -15,7 +16,9 @@ export const SurveyOne = () => {
         return (
             <div>
                 <h1>Thank you for completing the iPrep survey</h1>
+                <Link to="/checkout">
                 <button>Click Here to move on to the cart!</button>
+                </Link>
             </div>
         )
     }
