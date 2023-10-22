@@ -172,9 +172,11 @@ export default function Homepage() {
             <h4 className="s3-h4">
               Check out our Recipe Catalog now to see how!
             </h4>
-            <Button id="recipes-button" size="sm" variant="dark">
-              Recipes
-            </Button>
+            <Link to="/recipies">
+              <Button id="recipes-button" size="sm" variant="dark">
+                Recipes
+              </Button>
+            </Link>
           </Col>
           <Col />
         </Row>
@@ -526,7 +528,7 @@ export default function Homepage() {
                   quiz
                 </Nav.Link>
 
-                <Nav.Link id="recipes-link" href="#recipes">
+                <Nav.Link href="/recipies" id="recipes-link">
                   recipes
                 </Nav.Link>
                 <Nav.Link href="/checkout" id="cart-link">

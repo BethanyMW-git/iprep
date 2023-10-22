@@ -5,6 +5,7 @@ import { Login } from "./components/login";
 import { Register } from "./components/register";
 import { SurveyOne } from "./surveycomponents/surveydisplay/displaysurvey";
 import { Checkout } from "./Checkout"
+import { Spoonacular } from "./spoonacularRecipe/Spoonacular"
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/register" element={<Register />} />
           <Route path="/survey" element={<SurveyOne />} />
           <Route path="/checkout" element={<Checkout />} />
+          <Route path="/recipies" element={<Spoonacular /> } />
         </Routes>
       </Router>
     </div>
