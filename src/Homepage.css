@@ -32,9 +32,9 @@
   margin-bottom: 10px;
 }
 
-/* .login-button:focus { this code did not
-    outline: none;
-} */
+#login-button.btn.btn-primary {
+  --bs-btn-border-color: #d9ecf2;
+}
 
 .signup-button {
   display: flexbox;

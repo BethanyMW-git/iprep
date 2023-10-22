@@ -57,7 +57,7 @@ export default function Homepage() {
                       paddingLeft: 15,
                       paddingRight: 15,
                       color: "black",
-                      marginTop: 60,
+                      marginTop: 60
                     }}
                   >
                     Login

@@ -1,5 +1,5 @@
 import React from "react";
-import 'survey-react/survey.css';
+//import 'survey-react/survey.css';
 import * as Survey from 'survey-react';
 import {surveyJson} from '../surveys/surveyjson';
 import "survey-core/defaultV2.min.css";

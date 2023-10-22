@@ -1,5 +1,6 @@
 //import App from "./App";
 import Button from "react-bootstrap/Button";
+import "./Checkout.css";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import Form from "react-bootstrap/Form";
@@ -8,22 +9,27 @@ import Row from "react-bootstrap/Row";
 
 export const Checkout = () => {
     return (
-        <div id="checkout-box">
+        <div id="checkout-box" style={{ marginTop: 150, width: "50%", marginRight: "25%", marginLeft: "25%" }}>
             <Container>
                 <Row id="quiz-results">
                     <Col>
-                        <h3>Quiz Results</h3>
-                        <ul>
-                            <li>Omnivore</li>
-                            <li>2 person household</li>
-                            <li>Chinese cuisine</li>
-                            <li>nut allergy</li>
-                        </ul>
+                        <h3>Survey Results</h3>
+                        <div id="results">
+                            <ul>
+                                <li>Household: 2 people</li>
+                                <li>Diet: Omnivore</li>
+                                <li>Allergies: Tree Nuts</li>
+                                <li>Cuisine: Chinese</li>
+                                <li>Kitchen Appliances: Stove</li>
+                                <li>Spice: Mild</li>
+                                <li>Dislikes: Liver</li>
+                            </ul>
+                        </div>
                     </Col>
                 </Row>
                 <Row id="suggested-product">
                     <Col>
-                        <p>Our Silver package is the best fit for your needs:</p>
+                        <p style={{ fontWeight: 200, fontSize: 20, marginBottom: 20 }}>Our Silver package is the best fit for your needs:</p>
                     </Col>
                 </Row>
                 <Row id="product-offerings">
