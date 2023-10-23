@@ -46,13 +46,25 @@ li {
 
 #suggested-product, #bronze, #silver, #gold, #total {
     color: white;
+    display: flexbox;
 }
 
 #total {
     margin-top: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
+    display: flexbox;
+}
+
+#form-check-input {
+    width: 0.5em;
+}
+
+#radio {
+    width: 10px;
+    height: 10px;
 }
 
 #checkout-button {
     background-image:-moz-linear-gradient(45deg,blue,white);
+    display: flexbox;
 }

@@ -4,7 +4,7 @@ import "./Checkout.css";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import Form from "react-bootstrap/Form";
-import Ratio from "react-bootstrap/Ratio";
+//import Ratio from "react-bootstrap/Ratio";
 import Row from "react-bootstrap/Row";
 
 
@@ -22,11 +22,11 @@ export const Checkout = () => {
             id="checkout-box"
             style={{
                 width: "50%",
-                height: "70%",
+                height: "85%",
                 marginRight: "25%",
                 marginLeft: "25%",
                 padding: "5%",
-                marginTop: "10%",
+                marginTop: "5%",
                 backgroundColor: "black",
                 opacity: .8, 
                 }}
@@ -63,9 +63,14 @@ export const Checkout = () => {
                     <Col>
                         {/* Bronze
                         <input type="radio">$50/wk</input> */}
-                        <Form id="bronze">
+                        <Form id="bronze" className="custom-control custom-radio">
                             <Form.Label>Bronze $50</Form.Label>
-                            <Form.Check type="radio"></Form.Check>
+                            <Form.Check
+                                type="radio"
+                                id="radio"
+                                className="custom-control-input"
+                                >
+                            </Form.Check>
                         </Form>
                     </Col>
                     <Col>
@@ -73,7 +78,7 @@ export const Checkout = () => {
                         <input type="radio">$100/wk</input> */}
                         <Form id="silver">
                             <Form.Label>Silver $100/wk</Form.Label>
-                            <Form.Check type="radio"></Form.Check>
+                            <Form.Check type="radio" id="radio"></Form.Check>
                         </Form>
                     </Col>
                     <Col>
@@ -81,7 +86,7 @@ export const Checkout = () => {
                         <input type="radio">$150/wk</input> */}
                         <Form id="gold">
                             <Form.Label>Gold $150/wk</Form.Label>
-                            <Form.Check type="radio"></Form.Check>
+                            <Form.Check type="radio" id="radio"></Form.Check>
                         </Form>
                     </Col>
                 </Row>
