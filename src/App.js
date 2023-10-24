@@ -17,7 +17,7 @@ function App() {
           <Route path="/register" element={<Register />} />
           <Route path="/survey" element={<SurveyOne />} />
           <Route path="/checkout" element={<Checkout />} />
-          <Route path="/recipies" element={<Spoonacular /> } />
+          <Route path="/recipes" element={<Spoonacular /> } />
         </Routes>
       </Router>
     </div>

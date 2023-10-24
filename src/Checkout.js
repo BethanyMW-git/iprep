@@ -6,10 +6,17 @@ import Container from "react-bootstrap/Container";
 import Form from "react-bootstrap/Form";
 //import Ratio from "react-bootstrap/Ratio";
 import Row from "react-bootstrap/Row";
+import { Link } from "react-router-dom"
+import Alert from 'react-bootstrap/Alert';
 
 
 export const Checkout = () => {
-    return (
+
+    const completeCheckout = () => {
+        alert("Congratulations, you have purchased the Silver Package!")
+}
+    
+return (
         <div 
             id="checkout-background"
             className="bg-image container-fluid"
@@ -45,7 +52,7 @@ export const Checkout = () => {
                             <ul>
                                 <li>Household: 2 people</li>
                                 <li>Diet: Omnivore</li>
-                                <li>Allergies: Tree Nuts</li>
+                                <li>Allergies: Nuts</li>
                                 <li>Cuisine: Chinese</li>
                                 <li>Kitchen Appliances: Stove</li>
                                 <li>Spice: Mild</li>
@@ -98,7 +105,13 @@ export const Checkout = () => {
                         id="checkout-button"
                         variant="info"
                         style={{ backgroundImage:"-moz-linear-gradient(45deg,blue,white)"}}
+                        onClick={completeCheckout}
                     >Checkout</Button>
+                </Row>
+                <Row>
+                    <Link to="/">
+                        <Button variant="link">Homepage</Button>
+                    </Link>
                 </Row>
             </Container>
         </div>

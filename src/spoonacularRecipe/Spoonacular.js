@@ -128,7 +128,7 @@ export const Spoonacular = () => {
         <input type='text' 
           placeholder="Search (e.g. Salmon)" 
           onChange={handleChange} />
-          <button onClick={getRecipies}>Get your recipies</button>
+          <button onClick={getRecipies}>Get your recipes</button>
       {searchRecipies && <RecipeList searchRecipies={searchRecipies} />}
     </div>
     // </div>
