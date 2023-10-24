@@ -27,10 +27,11 @@ export default function Meal({ meal }) {
         <ul className="details">
         <li>Your meal will be ready in {recipeInfo.readyInMinutes} minutes and feeds {recipeInfo.servings} people </li>
         <div style={{ whiteSpace: "wrap"}} className="summary" dangerouslySetInnerHTML={{__html: recipeInfo.summary}}></div>
+        {recipeInfo && <a href={recipeInfo.sourceUrl}>Go to Recipe</a>}
         <hr></hr>
       </ul>}
           
-        {recipeInfo && <a href={recipeInfo.sourceUrl}>Go to Recipe</a>}
+        
       </div>
   );
 }
