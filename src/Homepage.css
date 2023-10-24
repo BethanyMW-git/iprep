@@ -42,7 +42,7 @@
   position: relative;
   color: white;
   width: 100px;
-  height: 55px;
+  height: 57px;
   margin-right: -1000px;
   margin-top: 60px;
   margin-bottom: 10px;
@@ -97,8 +97,8 @@
   position: relative;
   display: flexbox;
   margin-top: 1rem;
-  margin-bottom: 2rem;
-  width: 500px;
+  margin-bottom: 1rem;
+  /* width: 500px; */
   margin-left: auto;
   margin-right: auto;
 }
@@ -106,7 +106,7 @@
 .quiz-button {
   background-color: black;
   color: white;
-  margin-bottom: 4rem;
+  margin-bottom: 1rem; /*no change*/
   display: flexbox;
   position: relative;
   height: 15px;
@@ -141,7 +141,7 @@
   display: flexbox;
   position: relative;
   color: black;
-  width: 600px;
+  /* width: 600px; */
 }
 
 .s3-h4 {
